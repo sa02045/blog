@@ -350,4 +350,35 @@ a:focus {
 .header li {
   list-style: none;
   cursor: pointer;
+  height: 10px;
+}
+
+.header li:hover::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #000;
+}
+
+.header li:hover::after {
+  content: "";
+  display: block;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 100%;
+  background-color: #000;
+  animation: underline 0.3s ease-in-out forwards;
+}
+
+@keyframes underline {
+  from {
+    width: 0%;
+    left: 50%;
+  }
+  to {
+    width: 100%;
+    left: 0;
+  }
 }
