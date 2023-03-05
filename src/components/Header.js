@@ -11,6 +11,7 @@ function Header({ location }) {
     setRandomQuote(quotes[randomNumber])
   })
 
+  console.log(location)
   // const isRootPath = location.pathname === rootPath
 
   return (
@@ -24,10 +25,14 @@ function Header({ location }) {
       <nav>
         <ul>
           <Link to="/posts">
-            <li>Posts</li>
+            <li className={location.pathname === "/posts/" ? "clicked" : ""}>
+              Posts
+            </li>
           </Link>
           <Link to="/resume/">
-            <li>Resume</li>
+            <li className={location.pathname === "/resume/" ? "clicked" : ""}>
+              Resume
+            </li>
           </Link>
           <Link to="/">
             <li>Github</li>

@@ -353,15 +353,7 @@ a:focus {
   height: 10px;
 }
 
-.header li:hover::after {
-  content: "";
-  display: block;
-  width: 100%;
-  height: 2px;
-  background-color: var(--color-text);
-}
-
-.header li:hover::after {
+.header li:not(.clicked):hover::after {
   content: "";
   display: block;
   left: 0;
@@ -371,6 +363,16 @@ a:focus {
   background-color: var(--color-text);
   animation: underline 0.3s ease-in-out forwards;
   -webkit-animation: underline 0.3s ease-in-out forwards;
+}
+
+.header li.clicked::after {
+  content: "";
+  display: block;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 100%;
+  background-color: var(--color-text);
 }
 
 @keyframes underline {
