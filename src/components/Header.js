@@ -19,13 +19,14 @@ function Header({ location }) {
       <div className="header__title-container">
         <h1>소프트엔지니어 블로그</h1>
         <div className="header__sub-title">
-          {randomQuote.quote} - {randomQuote.author}
+          <q>{randomQuote.quote}</q>
+          <div> - {randomQuote.author}</div>
         </div>
       </div>
       <nav>
         <ul>
-          <Link to="/posts">
-            <li className={location.pathname === "/posts/" ? "clicked" : ""}>
+          <Link to="/">
+            <li className={location.pathname === "/" ? "clicked" : ""}>
               Posts
             </li>
           </Link>
@@ -34,7 +35,7 @@ function Header({ location }) {
               Resume
             </li>
           </Link>
-          <Link to="/">
+          <Link to="https://github.com/sa02045">
             <li>Github</li>
           </Link>
         </ul>
