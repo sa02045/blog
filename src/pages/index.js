@@ -27,28 +27,38 @@ const BlogIndex = ({ data, location }) => {
           const title = post.frontmatter.title || post.fields.slug
 
           return (
-            <li key={post.fields.slug}>
+            <li key={post.fields.slug} className="post-list">
               <article
                 className="post-list-item"
                 itemScope
                 itemType="http://schema.org/Article"
               >
-                <header>
-                  <h2>
-                    <Link to={post.fields.slug} itemProp="url">
-                      <span itemProp="headline">{title}</span>
-                    </Link>
-                  </h2>
-                  <span>{post.frontmatter.date}</span>
-                </header>
-                <section>
-                  <p
-                    dangerouslySetInnerHTML={{
-                      __html: post.frontmatter.description || post.excerpt,
-                    }}
-                    itemProp="description"
-                  />
-                </section>
+                <img
+                  src={post.frontmatter.thumbnail}
+                  width="300"
+                  height="200"
+                  className="thumbnail"
+                />
+                <div className="post-list-item-content">
+                  <header>
+                    <h2>
+                      <Link to={post.fields.slug} itemProp="url">
+                        <span itemProp="headline">{title}</span>
+                      </Link>
+                    </h2>
+                  </header>
+                  <section>
+                    <p
+                      dangerouslySetInnerHTML={{
+                        __html: post.frontmatter.description || post.excerpt,
+                      }}
+                      itemProp="description"
+                    />
+                  </section>
+                  <span className="post-list-item-date">
+                    {post.frontmatter.date}
+                  </span>
+                </div>
               </article>
             </li>
           )
@@ -84,6 +94,7 @@ export const pageQuery = graphql`
           date(formatString: "YYYY.MM.DD")
           title
           description
+          thumbnail
         }
       }
     }

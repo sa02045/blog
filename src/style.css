@@ -1,5 +1,7 @@
 /* CSS Custom Properties Definitions */
 
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard-dynamic-subset.css");
+
 :root {
   --maxWidth-none: "none";
   --maxWidth-xs: 20rem;
@@ -11,7 +13,7 @@
   --maxWidth-3xl: 48rem;
   --maxWidth-4xl: 56rem;
   --maxWidth-full: "100%";
-  --maxWidth-wrapper: var(--maxWidth-3xl);
+  --maxWidth-wrapper: var(--maxWidth-4xl);
   --spacing-px: "1px";
   --spacing-0: 0;
   --spacing-1: 0.25rem;
@@ -76,7 +78,11 @@ html {
 }
 
 body {
-  font-family: var(--font-body);
+  font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo",
+    "Pretendard Variable", Pretendard, Roboto, "Noto Sans KR", "Segoe UI",
+    "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+    sans-serif;
+
   font-size: var(--fontSize-1);
   color: var(--color-text);
 }
@@ -253,9 +259,42 @@ a:focus {
   margin: 0;
 }
 
+.post-list {
+  margin-top: 50px;
+}
+
+.post-list + .post-list {
+  margin-top: 100px;
+}
+
 .post-list-item {
-  margin-bottom: var(--spacing-10);
-  margin-top: var(--spacing-10);
+  display: flex;
+}
+
+.post-list-item .thumbnail {
+  border-radius: 16px;
+  -webkit-border-radius: 16px;
+  -moz-border-radius: 16px;
+  -ms-border-radius: 16px;
+  -o-border-radius: 16px;
+  margin-right: 32px;
+}
+
+@media (max-width: 768px) {
+  .post-list-item p {
+    display: none;
+  }
+}
+
+.post-list-item-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.post-list-item-date {
+  color: #4f5969;
+  margin-top: 15px;
 }
 
 .post-list-item p {
@@ -418,8 +457,8 @@ a {
 
 .header__sub-title {
   margin-top: 10px;
-  width: 80%;
-  min-height: 50px;
+  width: 100%;
+  height: 80px;
   display: flex;
   justify-content: center;
   align-items: center;
