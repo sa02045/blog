@@ -29,12 +29,10 @@
   --spacing-20: 5rem;
   --spacing-24: 6rem;
   --spacing-32: 8rem;
-  --fontFamily-sans: "MontserratVariable", system-ui, -apple-system,
-    BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans",
-    sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+  --fontFamily-sans: "MontserratVariable", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
     "Noto Color Emoji";
-  --fontFamily-serif: "Merriweather", "Georgia", Cambria, "Times New Roman",
-    Times, serif;
+  --fontFamily-serif: "Merriweather", "Georgia", Cambria, "Times New Roman", Times, serif;
   --font-body: var(--fontFamily-serif);
   --font-heading: var(--fontFamily-sans);
   --fontWeight-normal: 400;
@@ -78,13 +76,12 @@ html {
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo",
-    "Pretendard Variable", Pretendard, Roboto, "Noto Sans KR", "Segoe UI",
-    "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
-    sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Pretendard Variable", Pretendard, Roboto,
+    "Noto Sans KR", "Segoe UI", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
 
   font-size: var(--fontSize-1);
   color: var(--color-text);
+  height: 100vh;
 }
 
 footer {
@@ -483,4 +480,108 @@ a {
     text-align: center;
     flex-direction: column;
   }
+}
+
+/* Reference https://codepen.io/tdoughty/pen/ZZqgQq */
+.whaleContainer {
+  position: absolute;
+  top: -120px;
+  transform: translateX(0);
+  animation-name: whaleTranslate;
+  animation-duration: 30s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  z-index: 7000;
+  -webkit-transform: translateX(0);
+  -moz-transform: translateX(0);
+  -ms-transform: translateX(0);
+  -o-transform: translateX(0);
+}
+
+@keyframes whaleTranslate {
+  0% {
+    transform: translateX(0);
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+  }
+  100% {
+    transform: translateX(767px);
+    -webkit-transform: translateX(767px);
+    -moz-transform: translateX(767px);
+    -ms-transform: translateX(767px);
+    -o-transform: translateX(767px);
+  }
+}
+
+.whalePos {
+  position: absolute;
+  z-index: 1000;
+  &.size1 {
+    top: 150px;
+    left: -230px;
+  }
+}
+.whaleRotate {
+  position: relative;
+  width: 245px;
+  height: 110px;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  &.size1 {
+    transform: rotate(0) scale(0.35);
+    animation-name: whaleMovementXLarge;
+  }
+}
+
+@keyframes whaleMovementXLarge {
+  0% {
+    transform: rotate(0) scale(0.35);
+  }
+  100% {
+    transform: rotate(10deg) scale(0.35);
+  }
+}
+
+.whale {
+  position: absolute;
+  width: inherit;
+  height: inherit;
+  background: radial-gradient(
+    at 40% 20%,
+    #95d6df 0%,
+    #95d6df 35%,
+    #6db3c2 35%,
+    #6db3c2 60%,
+    #6db3c2 70%,
+    #407a8b 70%,
+    #407a8b 100%
+  );
+  clip-path: polygon(
+    15% 0%,
+    18.5% 20%,
+    19% 37%,
+    27% 46.5%,
+    33% 46.5%,
+    42.5% 37%,
+    43% 26.5%,
+    50.5% 28.5%,
+    65.5% 17%,
+    88.5% 12.5%,
+    97.5% 22.5%,
+    100% 49.5%,
+    97% 65.5%,
+    89.5% 81.5%,
+    64.5% 86.5%,
+    43.5% 80%,
+    23% 59.5%,
+    15.5% 41.5%,
+    8% 40%,
+    1.5% 28.5%,
+    6.5% 25%,
+    12.5% 26.5%,
+    12% 14%
+  );
 }
