@@ -20,9 +20,7 @@ const BlogIndex = ({ data, location }) => {
                 <article className="post-list-item" itemScope itemType="http://schema.org/Article">
                   <div className="post-list-item-content">
                     <header>
-                      <h2>
-                        <span itemProp="headline">{title}</span>
-                      </h2>
+                      <h2>{title}</h2>
                     </header>
                     <section>
                       <p className="post-list-item-description">{post.frontmatter.description}</p>

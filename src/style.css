@@ -82,7 +82,6 @@ body {
   font-size: var(--fontSize-1);
   color: var(--color-text);
   height: 100vh;
-  background: linear-gradient(180deg, #87ceeb, #1e90ff);
 }
 
 footer {
@@ -315,14 +314,10 @@ a:focus {
 }
 
 .post-list-item h2 {
-  font-size: var(--fontSize-5);
+  font-size: var(--fontSize-4);
   margin-bottom: var(--spacing-2);
   margin-top: var(--spacing-0);
   color: var(--color-primary);
-}
-
-.post-list-item header {
-  margin-bottom: var(--spacing-4);
 }
 
 .header-link-home {
@@ -588,4 +583,39 @@ a {
     12.5% 26.5%,
     12% 14%
   );
+}
+
+.title {
+  position: absolute;
+  font-size: 3rem;
+  margin: 0;
+  margin-top: 50px;
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+.title:nth-child(1) {
+  color: transparent;
+  -webkit-text-stroke: 2px #03a9f4;
+}
+
+.title:nth-child(2) {
+  color: #03a9f4;
+  animation: animate 4s ease-in-out infinite;
+  -webkit-animation: animate 4s ease-in-out infinite;
+}
+
+.title-wrapper {
+  position: relative;
+  width: 100%;
+  height: 80px;
+}
+
+@keyframes animate {
+  0%,
+  100% {
+    clip-path: polygon(0 53%, 16% 50%, 34% 57%, 53% 65%, 74% 63%, 85% 58%, 100% 52%, 100% 100%, 0% 100%);
+  }
+  50% {
+    clip-path: polygon(0 60%, 17% 69%, 34% 71%, 51% 61%, 67% 54%, 83% 52%, 100% 57%, 100% 100%, 0% 100%);
+  }
 }
