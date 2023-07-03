@@ -82,6 +82,7 @@ body {
   font-size: var(--fontSize-1);
   color: var(--color-text);
   height: 100vh;
+  background: linear-gradient(180deg, #87ceeb, #1e90ff);
 }
 
 footer {
@@ -245,6 +246,9 @@ a:focus {
   margin: var(--spacing-0) auto;
   max-width: var(--maxWidth-wrapper);
   padding: var(--spacing-1) var(--spacing-12);
+  background-color: #fff;
+  height: 100vh;
+  z-index: 999;
 }
 
 .global-header {
