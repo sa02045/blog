@@ -11,7 +11,7 @@
     "@deckdeckgo/highlight-code": "^4.4.0",
     "@fontsource/merriweather": "^4.5.14",
     "@fontsource/montserrat": "^4.5.14",
-    "gatsby": "^5.6.1",
+    "gatsby": "^5.11.0",
     "gatsby-plugin-dark-mode": "^1.1.2",
     "gatsby-plugin-feed": "^5.6.0",
     "gatsby-plugin-google-fonts": "^1.0.1",
