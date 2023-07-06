@@ -433,11 +433,11 @@ a:focus {
   }
 }
 
-.post-list-item h2 span {
+.post-title {
   position: relative;
 }
 
-.post-list-item h2 span:hover::after {
+.post-title:hover::after {
   position: absolute;
   content: "";
   display: block;
