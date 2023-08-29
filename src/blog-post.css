@@ -1,0 +1,30 @@
+.blog-post-title {
+  color: #30a2ff;
+  font-size: var(--fontSize-4);
+  font-weight: var(--fontWeight-bold);
+}
+
+@media (max-width: 768px) {
+  .blog-post-title {
+    font-size: var(--fontSize-3);
+  }
+}
+
+.blog-post section h1 {
+  font-size: var(--fontSize-4);
+  font-weight: var(--fontWeight-bold);
+}
+
+.blog-post section h2 {
+  font-size: var(--fontSize-3);
+}
+
+.blog-post section h3 {
+  font-size: var(--fontSize-2);
+}
+
+.blog-post .language-text {
+  font-weight: var(--fontWeight-bold);
+  color: #30a2ff;
+  background: none;
+}
