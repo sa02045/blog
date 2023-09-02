@@ -28,3 +28,7 @@
   color: #30a2ff;
   background: none;
 }
+
+.blog-post .language-text {
+  border-bottom: 3px solid #9ac5f4;
+}

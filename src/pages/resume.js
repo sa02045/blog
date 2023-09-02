@@ -1,22 +1,22 @@
-import * as React from "react"
-import { graphql } from "gatsby"
+import * as React from "react";
+import { graphql } from "gatsby";
 
-import Layout from "../components/layout"
-import Seo from "../components/seo"
+import Layout from "../components/layout";
+import Seo from "../components/seo";
 
-const Resume = ({ data, location }) => {
-  const siteTitle = data.site.siteMetadata.title
+const About = ({ data, location }) => {
+  const siteTitle = data.site.siteMetadata.title;
 
   return (
     <Layout location={location} title={siteTitle}>
-      Resume
+      About
     </Layout>
-  )
-}
+  );
+};
 
-export const Head = () => <Seo title="404: Not Found" />
+export const Head = () => <Seo title="404: Not Found" />;
 
-export default Resume
+export default About;
 
 export const pageQuery = graphql`
   query {
@@ -26,4 +26,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;

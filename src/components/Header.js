@@ -1,35 +1,21 @@
 import { Link } from "gatsby";
-import React, { useEffect, useState } from "react";
-import quotes from "../constants/quotes";
+import React from "react";
+import GithubLogo from "../images/github-mark.png";
 
 function Header({ location }) {
-  const [randomQuote, setRandomQuote] = useState({});
-
-  useEffect(() => {
-    const randomNumber = Math.floor(Math.random() * quotes.length);
-    setRandomQuote(quotes[randomNumber]);
-  });
-
   return (
     <header className="header">
-      <div className="header__title-container">
-        <div className="title-wrapper">
-          <h2 className="title">DEVJO BLOG</h2>
-          <h2 className="title">DEVJO BLOG</h2>
-        </div>
-        <div className="header__sub-title">
-          <q>{randomQuote.quote}</q>
-          <div> - {randomQuote.author}</div>
-        </div>
-      </div>
-      <nav>
+      <nav className="header__nav">
         <ul>
           <Link to="/">
-            <li className={location.pathname === "/" ? "clicked" : ""}>Posts</li>
+            <li>dev.jo</li>
           </Link>
-          {/* <Link to="/resume/">
-            <li className={location.pathname === "/resume/" ? "clicked" : ""}>Resume</li>
-          </Link> */}
+          <Link to="/posts">
+            <li className={location.pathname === "/posts/" ? "clicked" : ""}>posts</li>
+          </Link>
+          <Link to="/resume">
+            <li className={location.pathname === "/resume/" ? "clicked" : ""}>resume</li>
+          </Link>
         </ul>
       </nav>
     </header>
