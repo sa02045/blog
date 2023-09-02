@@ -13,9 +13,9 @@ function Header({ location }) {
           <Link to="/posts">
             <li className={location.pathname === "/posts/" ? "clicked" : ""}>posts</li>
           </Link>
-          <Link to="/resume">
+          {/* <Link to="/resume">
             <li className={location.pathname === "/resume/" ? "clicked" : ""}>resume</li>
-          </Link>
+          </Link> */}
         </ul>
       </nav>
     </header>
