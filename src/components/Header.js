@@ -8,11 +8,11 @@ function Header({ location }) {
       <nav className="header__nav">
         <ul>
           <Link to="/">
-            <li>dev.jo</li>
+            <li>Home</li>
           </Link>
-          <Link to="/posts">
+          {/* <Link to="/posts">
             <li className={location.pathname === "/posts/" ? "clicked" : ""}>posts</li>
-          </Link>
+          </Link> */}
           {/* <Link to="/resume">
             <li className={location.pathname === "/resume/" ? "clicked" : ""}>resume</li>
           </Link> */}
