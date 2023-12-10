@@ -14,7 +14,13 @@ const BlogPostTemplate = ({ data: { previous, next, site, markdownRemark: post }
           <h2 className="blog-post-title" itemProp="headline">
             {post.frontmatter.title}
           </h2>
-          <p>{post.frontmatter.date}</p>
+          <p>
+            {new Date(post.frontmatter.date).toLocaleDateString("ko-KR", {
+              year: "numeric",
+              month: "long",
+              day: "numeric",
+            })}
+          </p>
         </header>
         <section dangerouslySetInnerHTML={{ __html: post.html }} itemProp="articleBody" />
         <hr />
