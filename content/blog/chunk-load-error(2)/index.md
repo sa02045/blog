@@ -1,7 +1,7 @@
 ---
 title: "ChunkLoadError (2) 해결편"
-date: "2023-12-10"
-description: "SPA에서 발생하는 ChunkLoadError에 대한 이야기"
+date: "2023-12-24"
+description: "SPA에서 발생하는 ChunkLoadError에 대한 이야기 (2)"
 ---
 
 ## 시작하며
