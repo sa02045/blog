@@ -50,7 +50,7 @@ ChunkLoadError 해결방법은 다양합니다. 프론트엔드 어플리케이�
 
 ## 1. No chunk
 
-<img src="/static/chunk-load-error(2)/notchunk.png" width="500"/>
+<img src="./notchunk.png" width="500"/>
 
 첫 번째 해결방법은 **chunk 자체를 생성하지 않는 방법**입니다. 어플리케이션을 메인 자바스크립트 파일 하나만으로 구성합니다.
 
@@ -84,7 +84,7 @@ export default defineConfig({
 
 세번째 방법은 **모든 버전의 chunk를 저장**하는 방법입니다.
 
-<img src="/static/chunk-load-error(2)/chunk3.png" width="400"/>
+<img src="./chunk3.png" width="400"/>
 
 웹 서버의 설정을 변경하여 SPA 어플리케이션을 배포할 때 이전 버전의 chunk를 서버에서 제거하지 않고 유지합니다.
 
@@ -105,7 +105,7 @@ export default defineConfig({
 
 전체적인 해결방법 흐름은 다음과 같습니다.
 
-<img src="/static/chunk-load-error(2)/chunk4.png" width="500"/>
+<img src="./chunk4.png" width="500"/>
 
 a. 유저가 "/Home" 라우트로 이동하기 위해 "Home-Old.js" chunk를 요청합니다. 이때 이전 버전의 chunk가 존재하지 않기 때문에 404 Not Found 에러와 함께 chunkLoadError가 발생합니다.
 
