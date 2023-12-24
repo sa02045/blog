@@ -10,18 +10,18 @@ description: "SPA에서 발생하는 ChunkLoadError에 대한 이야기 (2)"
 
 글을 시작하기전에 ChunkLoadError에 대한 간단한 사전 지식들을 정리하겠습니다.
 
-**1. ChunkLoadError는 번들러에 따라 에러메시지가 다를 수 있습니다.**
+#### **1. ChunkLoadError는 번들러에 따라 에러메시지가 다를 수 있습니다.**
 
-ChunkLoadError는 ECMAScript등에서 사용하는 공식적인 용어가 아닙니다. 따라서 번들러에 따라 에러메시지가 다를 수 있습니다.
+ChunkLoadError는 ECMAScript등에서 사용하는 공식적인 용어가 아니기 때문에 번들러에 따라 에러메시지가 다를 수 있습니다.
 
-```
-webpack: "ChunkLoadError"
-vite: "TypeError: Failed to fetch dynamically imported module
+```js
+webpack: "ChunkLoadError";
+vite: "TypeError: Failed to fetch dynamically imported module";
 ```
 
 이 글에서는 "ChunkLoadError"로 용어를 통일하겠습니다.
 
-**2. ChunkLoadError는 다양한 이유로 발생합니다.**
+#### **2. ChunkLoadError는 다양한 이유로 발생합니다.**
 
 **"이해편"에서 살펴본 에러 상황은 특정한 상황**에서 발생합니다. 하지만 반드시 이러한 특정한 상황에서만 발생하는 것은 아닙니다. 아래와 같이 **chunk를 정상적으로 불러오지 못하는 상황**이라면 모두 발생할 수 있습니다.
 
@@ -46,19 +46,19 @@ ChunkLoadError 해결방법은 다양합니다. 프론트엔드 어플리케이�
 2. ChunkLoadError가 발생했을 때 **대응하는 방법**
    - 새로운 버전의 chunk를 요청
 
-가장 해결하기 쉬운 방법부터 살펴보겠습니다.
+가장 쉬운 방법부터 살펴보겠습니다.
 
-## 1. No chunk
+## 해결방법 1. No chunk
 
 <img src="./notchunk.png" width="500"/>
 
 첫 번째 해결방법은 **chunk 자체를 생성하지 않는 방법**입니다. 어플리케이션을 메인 자바스크립트 파일 하나만으로 구성합니다.
 
-허무한 해결 방법이라고 생각할 수 있지만 `어플리케이션 규모가 작은 경우  효율적인 해결 방법입니다.` 왜냐하면 Code Splitting을 하면 추가적인 네트워크 비용이 발생하기 때문에 어플리케이션 규모가 그리 크지않다면 chunk를 요청하는 것보다 **메인 자바스크립트 파일 하나만으로 어플리케이션을 구성하는 것이 더 효율적**일 수 있습니다.
+허무한 해결 방법이라고 생각할 수 있지만 `어플리케이션 규모가 작은 경우 효율적인 해결 방법입니다.` 왜냐하면 chunk를 요청하고 응답하면 추가적인 네트워크 비용이 발생하는데 오히려 어플리케이션 규모가 작다면 **메인 자바스크립트 파일 하나만으로 어플리케이션을 구성하는 것이 더 효율적**일 수 있습니다.
 
 > 사용자 입장에서 불편함을 느끼지 않는다면 섣부른 최적화를 하지 않는 것도 방법입니다.
 
-## 2. No Hash
+## 해결방법 2. No Hash
 
 **chunk의 해시를 제거하고 chunk의 버전을 하나로 관리하는 방법입니다.**
 
@@ -80,7 +80,7 @@ export default defineConfig({
 });
 ```
 
-## 3. 모든 버전의 chunk를 저장
+## 해결방법 3. 모든 버전의 chunk를 저장
 
 세번째 방법은 **모든 버전의 chunk를 저장**하는 방법입니다.
 
@@ -95,7 +95,7 @@ export default defineConfig({
 
 해시를 사용할 수 있기 때문에 캐시 설정을 할 수 있습니다. 하지만 chunk 파일을 관리해야하는 문제가 있습니다. 또한 추가적인 웹 서버 작업이 필요하기 때문에 번거로운 방법일 수 있습니다.
 
-## 4. 새로운 버전의 chunk를 요청하기
+## 해결방법 4. 새로운 버전의 chunk를 요청하기
 
 지금까지 소개했던 방법들은 ChunkLoadError를 발생시키지않도록 **에러의 원인을 없애는 방법**들이었습니다. 각 방법들은 조금씩 아쉬운 부분이 있습니다.
 
@@ -117,7 +117,7 @@ c. 새로고침된 브라우저는 새로운 index.html, index.js를 서버에 �
 
 브라우저를 해당 url로 새로고침해서 새로운 index.js, index.html을 응답받아 어플리케이션을 새롭게 실행하는 것입니다.
 
-### 4-1. Vue에서 해결하기
+### 해결방법 4-1. Vue에서 해결하기
 
 Vue의 공식 라우터인 `vue-router`는 라우트 변경시 에러를 감지하고 호출되는 onError 콜백을 제공합니다. onError 콜백에서 chunkLoadError를 감지하고 새로고침을 하는 방법으로 해결할 수 있습니다.
 
@@ -132,7 +132,7 @@ router.onError((error, to) => {
 });
 ```
 
-### 4-2. React에서 해결하기
+### 해결방법 4-2. React에서 해결하기
 
 vue-router는 라우터 레이어에서 onError 콜백을 제공하지만, `react-router-dom`은 onError 콜백을 제공하지 않습니다.(제가 알고있는 바로는..)
 
