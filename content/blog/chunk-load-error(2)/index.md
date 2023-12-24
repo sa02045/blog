@@ -48,7 +48,7 @@ ChunkLoadError 해결방법은 다양합니다. 프론트엔드 어플리케이�
 
 가장 해결하기 쉬운 방법부터 살펴보겠습니다.
 
-### 1. No chunk
+## 1. No chunk
 
 <img src="/static/chunk-load-error(2)/notchunk.png" width="500"/>
 
@@ -58,7 +58,7 @@ ChunkLoadError 해결방법은 다양합니다. 프론트엔드 어플리케이�
 
 > 사용자 입장에서 불편함을 느끼지 않는다면 섣부른 최적화를 하지 않는 것도 방법입니다.
 
-### 2. No Hash
+## 2. No Hash
 
 **chunk의 해시를 제거하고 chunk의 버전을 하나로 관리하는 방법입니다.**
 
@@ -80,7 +80,7 @@ export default defineConfig({
 });
 ```
 
-### 3. 모든 버전의 chunk를 저장
+## 3. 모든 버전의 chunk를 저장
 
 세번째 방법은 **모든 버전의 chunk를 저장**하는 방법입니다.
 
@@ -95,7 +95,7 @@ export default defineConfig({
 
 해시를 사용할 수 있기 때문에 캐시 설정을 할 수 있습니다. 하지만 chunk 파일을 관리해야하는 문제가 있습니다. 또한 추가적인 웹 서버 작업이 필요하기 때문에 번거로운 방법일 수 있습니다.
 
-### 4. 새로운 버전의 chunk를 요청하기
+## 4. 새로운 버전의 chunk를 요청하기
 
 지금까지 소개했던 방법들은 ChunkLoadError를 발생시키지않도록 **에러의 원인을 없애는 방법**들이었습니다. 각 방법들은 조금씩 아쉬운 부분이 있습니다.
 
@@ -117,7 +117,7 @@ c. 새로고침된 브라우저는 새로운 index.html, index.js를 서버에 �
 
 브라우저를 해당 url로 새로고침해서 새로운 index.js, index.html을 응답받아 어플리케이션을 새롭게 실행하는 것입니다.
 
-#### Vue에서 해결하기
+### 4-1. Vue에서 해결하기
 
 Vue의 공식 라우터인 `vue-router`는 라우트 변경시 에러를 감지하고 호출되는 onError 콜백을 제공합니다. onError 콜백에서 chunkLoadError를 감지하고 새로고침을 하는 방법으로 해결할 수 있습니다.
 
@@ -132,7 +132,7 @@ router.onError((error, to) => {
 });
 ```
 
-#### React에서 해결하기
+### 4-2. React에서 해결하기
 
 vue-router는 라우터 레이어에서 onError 콜백을 제공하지만, `react-router-dom`은 onError 콜백을 제공하지 않습니다.(제가 알고있는 바로는..)
 
@@ -196,7 +196,7 @@ export function importErrorHandler(err: string): {
 
 새로운 버전의 chunk를 가져오기 위해서는 번들러에서 chunk 파일명이 부여되는 해시를 예상할 수 있는 방법이 필요합니다. package.json의 어플리케이션의 version을 이용하는 방법을 생각해볼 수 있습니다. [참고](https://stackoverflow.com/questions/37416579/webpack-and-version-numbers-in-output-file)
 
-### 마치며
+## 마치며
 
 이번 글에서는 특정상황에서 발생하는 ChunkLoadError를 해결하는 방법에 대해 알아보았습니다. 무조건적인 해결방법 대신 상황과 어플리케이션에 따라 적절한 해결방법을 선택해야합니다.
 
