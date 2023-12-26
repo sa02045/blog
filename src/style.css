@@ -60,8 +60,6 @@
   --color-accent: #d1dce5;
 }
 
-/* HTML elements */
-
 *,
 :after,
 :before {
@@ -79,22 +77,16 @@ body {
   font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue",
     "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji",
     "Segoe UI Symbol", sans-serif;
+}
 
-  font-size: var(--fontSize-1);
-  color: var(--color-text);
+body.dark {
+  background-color: #1a202c;
+  color: #d1dce5;
 }
 
 footer {
   padding: var(--spacing-6) var(--spacing-0);
 }
-
-hr {
-  background: var(--color-accent);
-  height: 1px;
-  border: 0;
-}
-
-/* Heading */
 
 h2,
 h3,
@@ -144,8 +136,6 @@ h6 > a {
   text-decoration: none;
   color: inherit;
 }
-
-/* Prose */
 
 p {
   line-height: var(--lineHeight-relaxed);
@@ -201,17 +191,6 @@ blockquote > ol {
   list-style-position: inside;
 }
 
-table {
-  width: 100%;
-  margin-bottom: var(--spacing-8);
-  border-collapse: collapse;
-  border-spacing: 0.25rem;
-}
-
-table thead tr th {
-  border-bottom: 1px solid var(--color-accent);
-}
-
 /* Link */
 
 a {
@@ -224,13 +203,9 @@ a:focus {
   text-decoration: none;
 }
 
-/* Custom classes */
-
 .global-wrapper {
   margin: 0 auto;
   max-width: var(--maxWidth-wrapper);
-  background-color: #fff;
-  height: 100vh;
   padding: var(--spacing-0) var(--spacing-4);
 }
 
@@ -265,27 +240,6 @@ a:focus {
     width: 100%;
     left: 0;
   }
-}
-
-.post-title {
-  font-size: var(--fontSize-4);
-  margin-bottom: var(--spacing-2);
-  margin-top: var(--spacing-0);
-  position: relative;
-  color: #30a2ff;
-}
-
-.post-title:hover::after {
-  position: absolute;
-  content: "";
-  display: block;
-  opacity: 0.3;
-  left: 0;
-  bottom: 3px;
-  width: 100%;
-  border-bottom: 7px solid #9ac5f4;
-  animation: underline 0.3s ease-in-out forwards;
-  -webkit-animation: underline 0.3s ease-in-out forwards;
 }
 
 .home__top-container {
