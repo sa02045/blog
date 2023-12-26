@@ -52,7 +52,7 @@
   --fontSize-6: 2.488rem;
   --fontSize-7: 2.986rem;
 
-  --color-primary: #8a2be2;
+  --color-primary: #30a2ff;
   --color-text: #2e353f;
   --color-text-light: #4f5969;
   --color-heading: #1a202c;
@@ -77,11 +77,18 @@ body {
   font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue",
     "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji",
     "Segoe UI Symbol", sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
 }
 
 body.dark {
-  background-color: #1a202c;
-  color: #d1dce5;
+  --color-text: #fff;
+  --color-heading: #fff;
+  --color-heading-black: black;
+  --color-accent: #d1dce5;
+
+  --background-color: #2e353f;
+  --text-color: #fff;
 }
 
 footer {
@@ -168,27 +175,6 @@ li *:last-child {
 li > ul {
   margin-left: var(--spacing-8);
   margin-top: calc(var(--spacing-8) / 2);
-}
-
-blockquote {
-  color: var(--color-text-light);
-  margin-left: calc(-1 * var(--spacing-6));
-  margin-right: var(--spacing-8);
-  padding: var(--spacing-0) var(--spacing-0) var(--spacing-0) var(--spacing-6);
-  border-left: var(--spacing-1) solid #30a2ff;
-  font-size: var(--fontSize-2);
-  font-style: italic;
-  margin-bottom: var(--spacing-8);
-  margin-top: var(--spacing-8);
-}
-
-blockquote > :last-child {
-  margin-bottom: var(--spacing-0);
-}
-
-blockquote > ul,
-blockquote > ol {
-  list-style-position: inside;
 }
 
 /* Link */

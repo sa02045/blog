@@ -16,7 +16,7 @@
 }
 
 .post-list-item-date {
-  color: #4f5969;
+  color: var(--color-text-light);
 }
 
 .post-list-item-description {
@@ -48,7 +48,7 @@
   color: #30a2ff;
 }
 
-.post-title:hover::after {
+/* .post-title:hover::after {
   position: absolute;
   content: "";
   display: block;
@@ -59,4 +59,4 @@
   border-bottom: 7px solid #9ac5f4;
   animation: underline 0.3s ease-in-out forwards;
   -webkit-animation: underline 0.3s ease-in-out forwards;
-}
+} */

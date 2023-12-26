@@ -1,5 +1,5 @@
 .blog-post-title {
-  color: #30a2ff;
+  color: var(--color-primary);
   font-size: var(--fontSize-4);
   font-weight: var(--fontWeight-bold);
 }

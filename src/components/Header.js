@@ -1,6 +1,5 @@
 import { Link } from "gatsby";
 import React from "react";
-import GithubLogo from "../images/github-mark.png";
 
 function Header({ location }) {
   return (

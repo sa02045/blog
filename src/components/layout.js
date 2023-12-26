@@ -1,6 +1,7 @@
 import * as React from "react";
 import Header from "./Header";
 import { defineCustomElements as deckDeckGoHighlightElement } from "@deckdeckgo/highlight-code/dist/loader";
+import { DarkModeToggler } from "./DarkModeToggler";
 deckDeckGoHighlightElement();
 
 const Layout = ({ location, children }) => {
