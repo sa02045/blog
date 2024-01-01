@@ -1,7 +1,6 @@
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard-dynamic-subset.css");
 @import "./header.css";
 @import "./post-list.css";
-@import "./blog-post.css";
 
 :root {
   --maxWidth-none: "none";
@@ -55,8 +54,7 @@
   --color-primary: #30a2ff;
   --color-text: #2e353f;
   --color-text-light: #4f5969;
-  --color-heading: #1a202c;
-  --color-heading-black: black;
+  --color-heading: #000;
   --color-accent: #d1dce5;
 }
 
@@ -78,21 +76,24 @@ body {
     "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji",
     "Segoe UI Symbol", sans-serif;
   background-color: var(--background-color);
-  color: var(--text-color);
+  color: var(--color-text);
 }
 
 body.dark {
   --color-text: #fff;
   --color-heading: #fff;
-  --color-heading-black: black;
   --color-accent: #d1dce5;
 
   --background-color: #2e353f;
-  --text-color: #fff;
 }
 
 footer {
   padding: var(--spacing-6) var(--spacing-0);
+}
+
+h1 {
+  font-size: var(--fontSize-6);
+  color: var(--color-heading);
 }
 
 h2,
@@ -102,12 +103,6 @@ h5,
 h6 {
   font-weight: var(--fontWeight-bold);
   color: var(--color-heading);
-}
-
-h1 {
-  font-weight: var(--fontWeight-black);
-  font-size: var(--fontSize-6);
-  color: var(--color-heading-black);
 }
 
 h2 {
@@ -173,11 +168,9 @@ li *:last-child {
 }
 
 li > ul {
-  margin-left: var(--spacing-8);
-  margin-top: calc(var(--spacing-8) / 2);
+  margin-left: var(--spacing-0);
+  margin-top: calc(var(--spacing-4));
 }
-
-/* Link */
 
 a {
   color: var(--color-text);
@@ -207,10 +200,6 @@ a:focus {
 /* Media queries */
 
 @media (max-width: 42rem) {
-  blockquote {
-    padding: var(--spacing-0) var(--spacing-0) var(--spacing-0) var(--spacing-4);
-    margin-left: var(--spacing-0);
-  }
   ul,
   ol {
     list-style-position: inside;

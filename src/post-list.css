@@ -1,6 +1,3 @@
-.post-list-wrapper {
-  margin-top: 20px;
-}
 .post-list + .post-list {
   margin-top: 100px;
 }
@@ -45,18 +42,5 @@
   margin-bottom: var(--spacing-2);
   margin-top: var(--spacing-0);
   position: relative;
-  color: #30a2ff;
+  color: var(--color-primary);
 }
-
-/* .post-title:hover::after {
-  position: absolute;
-  content: "";
-  display: block;
-  opacity: 0.3;
-  left: 0;
-  bottom: 3px;
-  width: 100%;
-  border-bottom: 7px solid #9ac5f4;
-  animation: underline 0.3s ease-in-out forwards;
-  -webkit-animation: underline 0.3s ease-in-out forwards;
-} */
