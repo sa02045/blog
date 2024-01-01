@@ -9,11 +9,9 @@ const BlogPostTemplate = ({ data: { previous, next, site, markdownRemark: post }
 
   return (
     <Layout location={location} title={siteTitle}>
-      <article className="blog-post" itemScope itemType="http://schema.org/Article">
+      <article className="article" itemScope itemType="http://schema.org/Article">
         <header>
-          <h2 className="blog-post-title" itemProp="headline">
-            {post.frontmatter.title}
-          </h2>
+          <h1 itemProp="headline">{post.frontmatter.title}</h1>
           <p>
             {new Date(post.frontmatter.date).toLocaleDateString("ko-KR", {
               year: "numeric",
@@ -26,7 +24,7 @@ const BlogPostTemplate = ({ data: { previous, next, site, markdownRemark: post }
         <hr />
         <footer></footer>
       </article>
-      <nav className="blog-post-nav">
+      <nav>
         <ul
           style={{
             display: `flex`,
