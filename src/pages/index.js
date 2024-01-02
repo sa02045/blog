@@ -10,7 +10,7 @@ const Home = ({ data, location }) => {
 
   return (
     <Layout location={location} title={siteTitle}>
-      <div className="post-list-wrapper">
+      <section className="post-list-wrapper">
         {posts.map(post => {
           const title = post.frontmatter.title || post.fields.slug;
           return (
@@ -31,7 +31,7 @@ const Home = ({ data, location }) => {
             </Link>
           );
         })}
-      </div>
+      </section>
     </Layout>
   );
 };
