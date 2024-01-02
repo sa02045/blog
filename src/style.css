@@ -65,6 +65,7 @@
 }
 
 html {
+  overflow-y: scroll;
   line-height: var(--lineHeight-normal);
   font-size: var(--fontSize-root);
   -webkit-font-smoothing: antialiased;
@@ -184,6 +185,7 @@ a:focus {
 
 .global-wrapper {
   margin: 0 auto;
+  overflow-y: auto;
   max-width: var(--maxWidth-wrapper);
   padding: var(--spacing-0) var(--spacing-4);
 }
