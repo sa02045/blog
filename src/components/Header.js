@@ -1,5 +1,6 @@
 import { Link } from "gatsby";
 import React from "react";
+import Github from "../images/github.png";
 
 function Header({ location }) {
   return (
@@ -9,12 +10,15 @@ function Header({ location }) {
           <Link to="/">
             <li>Home</li>
           </Link>
-          {/* <Link to="/posts">
-            <li className={location.pathname === "/posts/" ? "clicked" : ""}>posts</li>
-          </Link> */}
-          {/* <Link to="/resume">
-            <li className={location.pathname === "/resume/" ? "clicked" : ""}>resume</li>
-          </Link> */}
+        </ul>
+      </nav>
+      <nav className="header__social">
+        <ul>
+          <Link to="https://github.com/sa02045">
+            <li>
+              <img src={Github} width={30} />
+            </li>
+          </Link>
         </ul>
       </nav>
     </header>
