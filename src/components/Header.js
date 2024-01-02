@@ -3,12 +3,14 @@ import React from "react";
 import Github from "../images/github.png";
 
 function Header({ location }) {
+  const currentPath = location.pathname;
+
   return (
     <header className="header">
       <nav className="header__nav">
         <ul>
           <Link to="/">
-            <li>Home</li>
+            <li className={currentPath === "/" ? "clicked" : ""}>Home</li>
           </Link>
         </ul>
       </nav>
