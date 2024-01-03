@@ -1,6 +1,6 @@
-import { Link } from "gatsby";
-import React from "react";
-import Github from "../images/github.png";
+import { Link } from 'gatsby';
+import React from 'react';
+import Github from '../images/github.png';
 
 function Header({ location }) {
   const currentPath = location.pathname;
@@ -10,7 +10,7 @@ function Header({ location }) {
       <nav className="header__nav">
         <ul>
           <Link to="/">
-            <li className={currentPath === "/" ? "clicked" : ""}>Home</li>
+            <li className={currentPath === '/' ? 'clicked' : ''}>Home</li>
           </Link>
         </ul>
       </nav>

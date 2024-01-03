@@ -23,7 +23,7 @@
 }
 
 .header__nav li:not(.clicked):hover::after {
-  content: "";
+  content: '';
   display: block;
   left: 0;
   bottom: 0;
@@ -35,7 +35,7 @@
 }
 
 .header__nav li .clicked::after {
-  content: "";
+  content: '';
   display: block;
   left: 0;
   bottom: 0;
@@ -47,7 +47,7 @@
 }
 
 .header__nav li.clicked::after {
-  content: "";
+  content: '';
   display: block;
   left: 0;
   bottom: 0;

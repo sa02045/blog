@@ -1,8 +1,8 @@
-import * as React from "react";
-import { Link, graphql } from "gatsby";
+import * as React from 'react';
+import { Link, graphql } from 'gatsby';
 
-import Layout from "../components/layout";
-import Seo from "../components/seo";
+import Layout from '../components/layout';
+import Seo from '../components/seo';
 
 const BlogPostTemplate = ({ data: { previous, next, site, markdownRemark: post }, location }) => {
   const siteTitle = site.siteMetadata?.title || `Title`;
@@ -13,10 +13,10 @@ const BlogPostTemplate = ({ data: { previous, next, site, markdownRemark: post }
         <header>
           <h1 itemProp="headline">{post.frontmatter.title}</h1>
           <p>
-            {new Date(post.frontmatter.date).toLocaleDateString("ko-KR", {
-              year: "numeric",
-              month: "long",
-              day: "numeric",
+            {new Date(post.frontmatter.date).toLocaleDateString('ko-KR', {
+              year: 'numeric',
+              month: 'long',
+              day: 'numeric',
             })}
           </p>
         </header>
