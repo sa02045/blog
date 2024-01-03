@@ -10,7 +10,7 @@ description: "SPA에서 발생하는 ChunkLoadError에 대한 이야기 (2)"
 
 글을 시작하기전에 ChunkLoadError에 대한 간단한 사전 지식들을 정리하겠습니다.
 
-#### **1. ChunkLoadError는 번들러에 따라 에러메시지가 다를 수 있습니다.**
+### 1. ChunkLoadError는 번들러에 따라 에러메시지가 다를 수 있습니다
 
 ChunkLoadError는 ECMAScript등에서 사용하는 공식적인 용어가 아니기 때문에 번들러에 따라 에러메시지가 다를 수 있습니다.
 
@@ -21,7 +21,7 @@ vite: "TypeError: Failed to fetch dynamically imported module";
 
 이 글에서는 "ChunkLoadError"로 용어를 통일하겠습니다.
 
-#### **2. ChunkLoadError는 다양한 이유로 발생합니다.**
+### 2. ChunkLoadError는 다양한 이유로 발생합니다
 
 **"이해편"에서 살펴본 에러 상황은 특정한 상황**에서 발생합니다. 하지만 반드시 이러한 특정한 상황에서만 발생하는 것은 아닙니다. 아래와 같이 **chunk를 정상적으로 불러오지 못하는 상황**이라면 모두 발생할 수 있습니다.
 
@@ -48,7 +48,7 @@ ChunkLoadError 해결방법은 다양합니다. 프론트엔드 어플리케이�
 
 가장 쉬운 방법부터 살펴보겠습니다.
 
-## 해결방법 1. No chunk
+### 해결방법 1. No chunk
 
 <img src="./notchunk.png" width="500"/>
 
@@ -58,7 +58,7 @@ ChunkLoadError 해결방법은 다양합니다. 프론트엔드 어플리케이�
 
 > 사용자 입장에서 불편함을 느끼지 않는다면 섣부른 최적화를 하지 않는 것도 방법입니다.
 
-## 해결방법 2. No Hash
+### 해결방법 2. No Hash
 
 **chunk의 해시를 제거하고 chunk의 버전을 하나로 관리하는 방법입니다.**
 
@@ -80,7 +80,7 @@ export default defineConfig({
 });
 ```
 
-## 해결방법 3. 모든 버전의 chunk를 저장
+### 해결방법 3. 모든 버전의 chunk를 저장
 
 세번째 방법은 **모든 버전의 chunk를 저장**하는 방법입니다.
 
@@ -95,7 +95,7 @@ export default defineConfig({
 
 해시를 사용할 수 있기 때문에 캐시 설정을 할 수 있습니다. 하지만 chunk 파일을 관리해야하는 문제가 있습니다. 또한 추가적인 웹 서버 작업이 필요하기 때문에 번거로운 방법일 수 있습니다.
 
-## 해결방법 4. 새로운 버전의 chunk를 요청하기
+### 해결방법 4. 새로운 버전의 chunk를 요청하기
 
 지금까지 소개했던 방법들은 ChunkLoadError를 발생시키지않도록 **에러의 원인을 없애는 방법**들이었습니다. 각 방법들은 조금씩 아쉬운 부분이 있습니다.
 
