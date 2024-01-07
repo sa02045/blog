@@ -19,7 +19,7 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-image`,
-    "gatsby-plugin-dark-mode",
+    'gatsby-plugin-dark-mode',
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -41,7 +41,7 @@ module.exports = {
           {
             resolve: `gatsby-remark-highlight-code`,
             options: {
-              terminal: "carbon",
+              terminal: 'carbon',
             },
           },
           {
@@ -86,7 +86,7 @@ module.exports = {
                   date: node.frontmatter.date,
                   url: site.siteMetadata.siteUrl + node.fields.slug,
                   guid: site.siteMetadata.siteUrl + node.fields.slug,
-                  custom_elements: [{ "content:encoded": node.html }],
+                  custom_elements: [{ 'content:encoded': node.html }],
                 });
               });
             },
@@ -105,8 +105,8 @@ module.exports = {
                 }
               }
             }`,
-            output: "/rss.xml",
-            title: "Gatsby Starter Blog RSS Feed",
+            output: '/rss.xml',
+            title: 'Gatsby Starter Blog RSS Feed',
           },
         ],
       },
@@ -126,13 +126,13 @@ module.exports = {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
         fonts: [`limelight`, `source sans pro\:300,400,400i,700`],
-        display: "swap",
+        display: 'swap',
       },
     },
     {
       resolve: `gatsby-plugin-gtag`,
       options: {
-        trackingId: "G-Z16KCJFFT5",
+        trackingId: 'G-Z16KCJFFT5',
         head: true,
       },
     },

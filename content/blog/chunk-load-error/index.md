@@ -1,7 +1,7 @@
 ---
-title: "Chunk load error (1) 문제이해편"
-date: "2023-12-10"
-description: "SPA에서 발생하는 Chunk load error에 대한 이야기"
+title: 'Chunk load error (1) 문제이해편'
+date: '2023-12-10'
+description: 'SPA에서 발생하는 Chunk load error에 대한 이야기'
 ---
 
 ## SPA

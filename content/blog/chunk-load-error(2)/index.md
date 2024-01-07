@@ -1,7 +1,7 @@
 ---
-title: "ChunkLoadError (2) 해결편"
-date: "2023-12-24"
-description: "SPA에서 발생하는 ChunkLoadError에 대한 이야기 (2)"
+title: 'ChunkLoadError (2) 해결편'
+date: '2023-12-24'
+description: 'SPA에서 발생하는 ChunkLoadError에 대한 이야기 (2)'
 ---
 
 ## 시작하며
@@ -15,8 +15,8 @@ description: "SPA에서 발생하는 ChunkLoadError에 대한 이야기 (2)"
 ChunkLoadError는 ECMAScript등에서 사용하는 공식적인 용어가 아니기 때문에 번들러에 따라 에러메시지가 다를 수 있습니다.
 
 ```js
-webpack: "ChunkLoadError";
-vite: "TypeError: Failed to fetch dynamically imported module";
+webpack: 'ChunkLoadError';
+vite: 'TypeError: Failed to fetch dynamically imported module';
 ```
 
 이 글에서는 "ChunkLoadError"로 용어를 통일하겠습니다.
@@ -73,7 +73,7 @@ export default defineConfig({
   build: {
     rollupOptions: {
       output: {
-        chunkFileNames: "assets/[name].js",
+        chunkFileNames: 'assets/[name].js',
       },
     },
   },
@@ -126,7 +126,7 @@ Vue의 공식 라우터인 `vue-router`는 라우트 변경시 에러를 감지�
 
 router.onError((error, to) => {
   // vite chunk error
-  if (error.message.includes("Failed to fetch dynamically imported module")) {
+  if (error.message.includes('Failed to fetch dynamically imported module')) {
     window.location.href = to.fullPath;
   }
 });
@@ -165,8 +165,8 @@ const router = createBrowserRouter([
 
 ```ts
 // reference:  https://github.com/vitejs/vite/issues/11804
-import type { ComponentType } from "react";
-import * as React from "react";
+import type { ComponentType } from 'react';
+import * as React from 'react';
 
 export const lazy = (factory: () => Promise<{ default: ComponentType<unknown> }>) => {
   return React.lazy(() => factory().catch(importErrorHandler));
@@ -176,12 +176,12 @@ export function importErrorHandler(err: string): {
   default: ComponentType<unknown>;
 } {
   // 무한 새로고침을 방지하기 위해 storage에 마지막 새로고침 시간을 저장합니다.
-  const timeStr = sessionStorage.getItem("last-reload");
+  const timeStr = sessionStorage.getItem('last-reload');
   const time = timeStr ? Number(timeStr) : null;
   const now = Date.now();
   const isReloading = !time || time + 10_000 < now;
   if (isReloading) {
-    sessionStorage.setItem("last-reload", String(now));
+    sessionStorage.setItem('last-reload', String(now));
     window.location.reload();
     return { default: () => null };
   }
