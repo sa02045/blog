@@ -174,7 +174,7 @@ li > ul {
 }
 
 a {
-  color: var(--color-text);
+  color: var(--color-primary);
   text-decoration: none;
 }
 
