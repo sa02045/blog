@@ -13,10 +13,11 @@
 }
 
 .post-list-item-date {
-  color: var(--color-text-light);
+  color: var(--color-text);
 }
 
 .post-list-item-description {
+  color: var(--color-text-light);
   margin-bottom: var(--spacing-3);
 }
 
