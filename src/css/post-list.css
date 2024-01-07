@@ -26,7 +26,11 @@
 }
 
 body.dark .post-list-item-description {
-  color: var(--color-text-light);
+  color: var(--color-text);
+}
+
+body.dark .post-title {
+  color: var(--color-text);
 }
 
 /* mobile */
