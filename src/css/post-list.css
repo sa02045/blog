@@ -21,12 +21,8 @@
 }
 
 .post-list-item-description {
-  color: var(--color-text-light);
-  margin-bottom: var(--spacing-3);
-}
-
-body.dark .post-list-item-description {
   color: var(--color-text);
+  margin-bottom: var(--spacing-3);
 }
 
 body.dark .post-title {
@@ -55,5 +51,4 @@ body.dark .post-title {
   margin-bottom: var(--spacing-2);
   margin-top: var(--spacing-0);
   position: relative;
-  color: var(--color-primary);
 }
