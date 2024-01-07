@@ -15,13 +15,13 @@ function Header({ location }) {
         </ul>
       </nav>
       <nav className="header__social">
-        <ul>
+        {/* <ul>
           <Link to="https://github.com/sa02045">
             <li>
               <img src={Github} width={30} />
             </li>
           </Link>
-        </ul>
+        </ul> */}
       </nav>
     </header>
   );
