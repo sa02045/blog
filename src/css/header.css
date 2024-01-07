@@ -20,6 +20,7 @@
   height: 10px;
   font-weight: var(--fontWeight-bold);
   font-size: var(--fontSize-2);
+  color: var(--color-text);
 }
 
 .header__nav li:not(.clicked):hover::after {
