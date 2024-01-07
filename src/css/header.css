@@ -15,12 +15,25 @@
 }
 
 .header li {
+  position: relative;
   list-style: none;
   cursor: pointer;
   height: 10px;
   font-weight: var(--fontWeight-bold);
   font-size: var(--fontSize-2);
   color: var(--color-text);
+}
+
+/* .header li 클래스를 가진 엘리먼트는 빨간 색깔의 "new"라는 작은 글씨를 가진다 */
+.header__nav li::before {
+  content: 'new';
+  /* red계열 요즘 많이 쓰는 색상 */
+  color: #ff0000;
+  font-size: var(--font-size--1);
+  margin-right: var(--spacing-1);
+  position: absolute;
+  top: -10px;
+  right: -20px;
 }
 
 .header__nav li:not(.clicked):hover::after {

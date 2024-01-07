@@ -10,7 +10,7 @@ function Header({ location }) {
       <nav className="header__nav">
         <ul>
           <Link to="/">
-            <li className={currentPath === '/' ? 'clicked' : ''}>Home</li>
+            <li className={currentPath === '/' ? 'clicked' : ''}>Posts</li>
           </Link>
         </ul>
       </nav>
