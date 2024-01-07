@@ -6,6 +6,12 @@ description: 'udemy "기술블로그로 알아보는 테크니컬 라이팅"을 
 
 | 유데미에서 지원을 받아 작성하게 되었습니다.
 
+<img src="./image.png" width="400"/>
+
+<br/>
+<br/>
+<br/>
+
 평소 테크티컬 라이팅에 대한 고민이 많았습니다. 개인 기술블로그에는 몇몇 글을 작성했지만 늘 아쉬움이 있었고, 항상 더 나은 글을 쓸 수 있는 방법에 대한 고민이 있었습니다. 이런 고민을 해결하고자, Udemy에서 제공하는 [기술블로그로 알아보는 테크니컬 라이팅](https://www.udemy.com/course/techwriting/?gclid=Cj0KCQiAtOmsBhCnARIsAGPa5yYfmdRVI7CM_dy86r5ZImQwr-0wJsu9DpnAxxn1e-7ZZ8GRbDliOY8aAvgiEALw_wcB) 강의를 수강하게 되었습니다.
 
 간단히 강의에 대한 총평을 하자면 테크티컬 라이팅에 대한 기본기를 탄탄히 배울 수 있는 강의였습니다. 과거에 글을 작성하면서 느꼈던 아쉬움들을 해결할 수 있는 방법을 배울 수 있었고, 앞으로 더 나은 글을 쓸 수 있도록 도움을 받을 수 있었습니다.
