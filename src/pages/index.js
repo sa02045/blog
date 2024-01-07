@@ -14,8 +14,8 @@ const Home = ({ data, location }) => {
         {posts.map(post => {
           const title = post.frontmatter.title || post.fields.slug;
           return (
-            <Link to={post.fields.slug} itemProp="url" key={post.title}>
-              <div key={post.fields.slug} className="post-list">
+            <Link to={post.fields.slug} itemProp="url" key={post.fields.slug}>
+              <div className="post-list">
                 <article className="post-list-item" itemScope itemType="http://schema.org/Article">
                   <div className="post-list-item-content">
                     <header>
