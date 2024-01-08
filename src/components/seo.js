@@ -29,6 +29,7 @@ const Seo = ({ description, title, children, thumbnailURL }) => {
       <meta property="og:title" content={title} />
       <meta property="og:description" content={metaDescription} />
       <meta property="og:type" content="website" />
+      <meta name="og:image" content={thumbnailURL} />
       <meta name="twitter:card" content="summary" />
       <meta name="twitter:creator" content={site.siteMetadata?.social?.twitter || ``} />
       <meta name="twitter:image" content={thumbnailURL} />
