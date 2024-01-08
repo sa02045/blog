@@ -3,7 +3,7 @@ import { Link, graphql } from 'gatsby';
 
 import Layout from '../components/layout';
 import Seo from '../components/seo';
-
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 const BlogPostTemplate = ({ data: { previous, next, site, markdownRemark: post }, location }) => {
   const siteTitle = site.siteMetadata?.title || `Title`;
 
@@ -55,7 +55,14 @@ const BlogPostTemplate = ({ data: { previous, next, site, markdownRemark: post }
 };
 
 export const Head = ({ data: { markdownRemark: post } }) => {
-  return <Seo title={post.frontmatter.title} description={post.frontmatter.description || post.excerpt} />;
+  const thumbnailURL = getImage(post.frontmatter.image)?.images?.fallback?.src || null;
+  return (
+    <Seo
+      title={post.frontmatter.title}
+      description={post.frontmatter.description || post.excerpt}
+      thumbnailURL={thumbnailURL}
+    />
+  );
 };
 
 export default BlogPostTemplate;

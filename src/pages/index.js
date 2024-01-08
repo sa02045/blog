@@ -3,6 +3,7 @@ import * as React from 'react';
 
 import Layout from '../components/layout';
 import Seo from '../components/seo';
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 
 const Home = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`;
@@ -25,6 +26,15 @@ const Home = ({ data, location }) => {
                       <p className="post-list-item-description">{post.frontmatter.description}</p>
                     </section>
                     <span className="post-list-item-date">{post.frontmatter.date}</span>
+                    {/* {getImage(post.frontmatter?.image)?.images?.fallback?.src}
+                    <GatsbyImage
+                      image={getImage(post.frontmatter.image)}
+                      alt={post.frontmatter.title}
+                      style={{
+                        width: 300,
+                        height: 100,
+                      }}
+                    /> */}
                   </div>
                 </article>
               </div>
@@ -57,6 +67,11 @@ export const pageQuery = graphql`
           date(formatString: "YYYY.MM.DD")
           title
           description
+          image {
+            childImageSharp {
+              gatsbyImageData(width: 800, height: 400, placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
+            }
+          }
         }
       }
     }
