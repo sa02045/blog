@@ -9,13 +9,13 @@
  */
 module.exports = {
   siteMetadata: {
-    title: ``,
+    title: `프론트엔드 개발자 devjojo 블로그`,
     author: {
-      name: `jo seung hee`,
+      name: `devjojo`,
       summary: `Frontend Developer`,
     },
-    description: `Devjo's blog`,
-    siteUrl: `https://gatsbystarterblogsource.gatsbyjs.io/`,
+    description: `devjojo's blog`,
+    siteUrl: `https://deluxe-centaur-4a55b0.netlify.app/`,
   },
   plugins: [
     `gatsby-plugin-image`,

@@ -9,6 +9,7 @@ const Seo = ({ description, title, children, thumbnailURL }) => {
           siteMetadata {
             title
             description
+            siteUrl
             social {
               twitter
             }
@@ -21,7 +22,6 @@ const Seo = ({ description, title, children, thumbnailURL }) => {
   const metaDescription = description || site.siteMetadata.description;
   const defaultTitle = site.siteMetadata?.title;
 
-  const SITE_URL = 'https://deluxe-centaur-4a55b0.netlify.app';
   return (
     <>
       <html lang="ko" />
@@ -32,13 +32,13 @@ const Seo = ({ description, title, children, thumbnailURL }) => {
       <meta property="og:description" content={metaDescription} />
       <meta property="og:type" content="website" />
       <meta property="og:locale" content="ko_KR" />
-      <meta property="og:image" content={SITE_URL + thumbnailURL} />
+      <meta property="og:image" content={site.siteUrl + thumbnailURL} />
       <meta property="og:image:width" content="1200" />
       <meta property="og:image:height" content="630" />
 
       <meta name="twitter:card" content="summary" />
       <meta name="twitter:creator" content={site.siteMetadata?.social?.twitter || ``} />
-      <meta name="twitter:image" content={SITE_URL + thumbnailURL} />
+      <meta name="twitter:image" content={site.siteUrl + thumbnailURL} />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={metaDescription} />
       {children}
