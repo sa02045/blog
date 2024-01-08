@@ -55,7 +55,7 @@ const BlogPostTemplate = ({ data: { previous, next, site, markdownRemark: post }
 };
 
 export const Head = ({ data: { markdownRemark: post } }) => {
-  const thumbnailURL = getImage(post.frontmatter.image)?.images?.fallback?.src || null;
+  const thumbnailURL = getImage(post.frontmatter.image)?.images?.fallback?.src || '';
   return (
     <Seo
       title={post.frontmatter.title}
@@ -82,6 +82,11 @@ export const pageQuery = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
         description
+        image {
+          childImageSharp {
+            gatsbyImageData(width: 800, height: 400, placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
+          }
+        }
       }
     }
     previous: markdownRemark(id: { eq: $previousPostId }) {
