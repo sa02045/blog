@@ -13,7 +13,7 @@
   --maxWidth-3xl: 48rem;
   --maxWidth-4xl: 56rem;
   --maxWidth-full: '100%';
-  --maxWidth-wrapper: var(--maxWidth-3xl);
+  --maxWidth-wrapper: 980px;
 
   --spacing-px: '1px';
   --spacing-0: 0;
@@ -234,4 +234,8 @@ a:focus {
 
 .home__top-container {
   margin-top: var(--spacing-20);
+}
+
+.article__headline {
+  margin-bottom: var(--spacing-1);
 }
