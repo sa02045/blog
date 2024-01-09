@@ -10,12 +10,12 @@
 module.exports = {
   siteMetadata: {
     title: `프론트엔드 개발자 devjojo 블로그`,
+    siteUrl: `https://deluxe-centaur-4a55b0.netlify.app/`,
     author: {
       name: `devjojo`,
       summary: `Frontend Developer`,
     },
     description: `devjojo's blog`,
-    siteUrl: `https://deluxe-centaur-4a55b0.netlify.app/`,
   },
   plugins: [
     `gatsby-plugin-image`,
