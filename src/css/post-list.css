@@ -3,6 +3,11 @@
   transition: transform 0.2s ease-in-out;
 }
 
+.post-list {
+  padding-bottom: var(--spacing-6);
+  border-bottom: 1px solid var(--color-border);
+}
+
 .post-list:hover .post-title {
   color: var(--color-primary);
   transition: color 0.2s ease-in-out;
