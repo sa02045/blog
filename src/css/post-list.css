@@ -1,3 +1,8 @@
+.post-list:hover .post-title {
+  color: var(--color-primary);
+  transition: color 0.2s ease-in-out;
+}
+
 .post-list + .post-list {
   margin-top: 100px;
 }
