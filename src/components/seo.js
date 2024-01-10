@@ -22,7 +22,7 @@ const Seo = ({ description, title, children, thumbnailURL }) => {
   const metaDescription = description || site.siteMetadata.description;
   const defaultTitle = site.siteMetadata?.title || title;
   const siteUrl = site.siteMetadata?.siteUrl || 'https://deluxe-centaur-4a55b0.netlify.app/';
-  const thumbnailURL = thumbnailURL || '/images/og-image.png';
+  const defaultThumbnailURL = thumbnailURL || '/images/og-image.png';
 
   return (
     <>
@@ -35,8 +35,8 @@ const Seo = ({ description, title, children, thumbnailURL }) => {
       <meta property="og:type" content="website" />
       <meta property="og:locale" content="ko_KR" />
 
-      <meta property="og:image" content={siteUrl + thumbnailURL} />
-      <meta name="twitter:image" content={siteUrl + thumbnailURL} />
+      <meta property="og:image" content={siteUrl + defaultThumbnailURL} />
+      <meta name="twitter:image" content={siteUrl + defaultThumbnailURL} />
 
       <meta name="twitter:card" content="summary" />
       <meta name="twitter:creator" content={site.siteMetadata?.social?.twitter || ``} />
