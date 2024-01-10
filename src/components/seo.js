@@ -20,14 +20,14 @@ const Seo = ({ description, title, children, thumbnailURL }) => {
   );
 
   const metaDescription = description || site.siteMetadata.description;
-  const defaultTitle = site.siteMetadata?.title;
+  const defaultTitle = site.siteMetadata?.title || title;
   const siteUrl = site.siteMetadata?.siteUrl || 'https://deluxe-centaur-4a55b0.netlify.app/';
   const thumbnailURL = thumbnailURL || '/images/og-image.png';
 
   return (
     <>
       <html lang="ko" />
-      <title>{defaultTitle ? `${title} | ${defaultTitle}` : title}</title>
+      <title>{defaultTitle}</title>
       <meta name="description" content={metaDescription} />
       <meta property="og:type" content="website" />
       <meta property="og:title" content={title} />
