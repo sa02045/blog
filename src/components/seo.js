@@ -21,7 +21,7 @@ const Seo = ({ description, title, children, thumbnailURL }) => {
 
   const metaDescription = description || site.siteMetadata.description;
   const defaultTitle = site.siteMetadata?.title;
-  const siteUrl = site.siteMetadata?.siteUrl;
+  const siteUrl = site.siteMetadata?.siteUrl || 'https://deluxe-centaur-4a55b0.netlify.app/';
   const thumbnailURL = thumbnailURL || '/images/og-image.png';
 
   return (
