@@ -4,6 +4,7 @@ import * as React from 'react';
 import Layout from '../components/layout';
 import Seo from '../components/seo';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
+import Post from '../components/Post';
 
 const Home = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`;
@@ -14,32 +15,10 @@ const Home = ({ data, location }) => {
       <section className="post-list-wrapper">
         {posts.map(post => {
           const title = post.frontmatter.title || post.fields.slug;
-          return (
-            <Link to={post.fields.slug} itemProp="url" key={post.fields.slug}>
-              <div className="post-list">
-                <article className="post-list-item" itemScope itemType="http://schema.org/Article">
-                  <div className="post-list-item-content">
-                    <header>
-                      <h2 className="post-title">{title}</h2>
-                    </header>
-                    <section>
-                      <p className="post-list-item-description">{post.frontmatter.description}</p>
-                    </section>
-                    <span className="post-list-item-date">{post.frontmatter.date}</span>
-                    {/* {getImage(post.frontmatter?.image)?.images?.fallback?.src}
-                    <GatsbyImage
-                      image={getImage(post.frontmatter.image)}
-                      alt={post.frontmatter.title}
-                      style={{
-                        width: 300,
-                        height: 100,
-                      }}
-                    /> */}
-                  </div>
-                </article>
-              </div>
-            </Link>
-          );
+          const description = post.frontmatter.description;
+          const date = post.frontmatter.date;
+          const to = post.fields.slug;
+          return <Post key={title} title={title} description={description} date={date} to={to} post={post} />;
         })}
       </section>
     </Layout>
