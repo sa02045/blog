@@ -33,7 +33,11 @@
     "sass": "^1.69.7"
   },
   "devDependencies": {
-    "prettier": "^2.8.3"
+    "@types/node": "^20.11.0",
+    "@types/react": "^18.2.47",
+    "@types/react-dom": "^18.2.18",
+    "prettier": "^2.8.3",
+    "typescript": "^5.3.3"
   },
   "homepage": "https://github.com/gatsbyjs/gatsby-starter-blog#readme",
   "keywords": [
