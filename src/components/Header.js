@@ -1,13 +1,13 @@
 import { Link } from 'gatsby';
 import React from 'react';
-import Github from '../images/github.png';
+import * as containerStyles from './header.module.scss';
 
 function Header({ location }) {
   const currentPath = location.pathname;
 
   return (
-    <header className="header">
-      <nav className="header__nav">
+    <header className={containerStyles.header}>
+      <nav>
         <ul>
           <Link to="/">
             <li className={currentPath === '/' ? 'clicked' : ''}>Posts</li>
