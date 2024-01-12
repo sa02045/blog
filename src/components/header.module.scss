@@ -4,17 +4,17 @@
   height: 48px;
 }
 
-ul {
+.header ul {
   padding-left: 0;
   display: flex;
   align-items: center;
 }
 
-nav {
+.header nav {
   flex: 1;
 }
 
-li {
+.header li {
   position: relative;
   list-style: none;
   cursor: pointer;
@@ -24,7 +24,7 @@ li {
   color: var(--color-text);
 }
 
-li::before {
+.header li::before {
   content: 'new';
   color: #ff0000;
   font-size: var(--font-size--1);
@@ -34,7 +34,7 @@ li::before {
   right: -20px;
 }
 
-li:hover::after {
+.header li:hover::after {
   content: '';
   display: block;
   left: 0;

@@ -1,12 +1,12 @@
 import { Link } from 'gatsby';
 import React from 'react';
-import * as containerStyles from './header.module.scss';
+import * as styles from './Header.module.scss';
 
 function Header({ location }) {
   const currentPath = location.pathname;
 
   return (
-    <header className={containerStyles.header}>
+    <header children={styles.header}>
       <nav>
         <ul>
           <Link to="/">
