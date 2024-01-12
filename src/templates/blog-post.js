@@ -4,7 +4,7 @@ import { Link, graphql } from 'gatsby';
 import Layout from '../components/layout';
 import { Seo } from '../components/Seo';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
-
+import PageNavigation from '../components/PageNavigation';
 const BlogPostTemplate = ({ data: { previous, next, site, markdownRemark: post }, location }) => {
   const siteTitle = site.siteMetadata?.title || `Title`;
 
@@ -36,32 +36,7 @@ const BlogPostTemplate = ({ data: { previous, next, site, markdownRemark: post }
             <hr />
             <footer></footer>
           </article>
-          <nav>
-            <ul
-              style={{
-                display: `flex`,
-                flexWrap: `wrap`,
-                justifyContent: `space-between`,
-                listStyle: `none`,
-                padding: 0,
-              }}
-            >
-              <li>
-                {previous && (
-                  <Link to={previous.fields.slug} rel="prev">
-                    ← {previous.frontmatter.title}
-                  </Link>
-                )}
-              </li>
-              <li>
-                {next && (
-                  <Link to={next.fields.slug} rel="next">
-                    {next.frontmatter.title} →
-                  </Link>
-                )}
-              </li>
-            </ul>
-          </nav>
+          <PageNavigation previous={previous} next={next} />
         </div>
       </div>
     </Layout>
