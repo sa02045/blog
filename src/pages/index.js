@@ -1,9 +1,8 @@
-import { Link, graphql } from 'gatsby';
+import { graphql } from 'gatsby';
 import * as React from 'react';
 
 import Layout from '../components/layout';
 import Seo from '../components/seo';
-import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import { PostList } from '../components/PostList';
 
 const Home = ({ data, location }) => {
