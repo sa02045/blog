@@ -6,7 +6,7 @@ function Header({ location }) {
   const currentPath = location.pathname;
 
   return (
-    <header children={styles.header}>
+    <header className={styles.header}>
       <nav>
         <ul>
           <Link to="/">
