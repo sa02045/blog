@@ -7,7 +7,7 @@ interface Props {
   title: string;
   to: string;
 }
-const Post = ({ date, title, description, to }: Props) => {
+export const Post = ({ date, title, description, to }: Props) => {
   return (
     <Link to={to} itemProp="url">
       <div className="post-list">
@@ -26,8 +26,6 @@ const Post = ({ date, title, description, to }: Props) => {
     </Link>
   );
 };
-
-export default Post;
 
 // TODO: thumbnail image
 //         {/* {getImage(post.frontmatter?.image)?.images?.fallback?.src}

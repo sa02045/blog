@@ -4,7 +4,7 @@ import * as React from 'react';
 import Layout from '../components/layout';
 import Seo from '../components/seo';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
-import Post from '../components/Post';
+import { PostList } from '../components/PostList';
 
 const Home = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`;
@@ -13,13 +13,7 @@ const Home = ({ data, location }) => {
   return (
     <Layout location={location} title={siteTitle}>
       <section className="post-list-wrapper">
-        {posts.map(post => {
-          const title = post.frontmatter.title || post.fields.slug;
-          const description = post.frontmatter.description;
-          const date = post.frontmatter.date;
-          const to = post.fields.slug;
-          return <Post key={title} title={title} description={description} date={date} to={to} post={post} />;
-        })}
+        <PostList posts={posts} />
       </section>
     </Layout>
   );
