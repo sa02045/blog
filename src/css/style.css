@@ -256,3 +256,13 @@ a:focus {
 .table-of-content li > ul > li {
   list-style-type: disc;
 }
+
+code {
+  font-family: 'Pretendard Variable', Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue',
+    'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', 'Apple Color Emoji', 'Segoe UI Emoji',
+    'Segoe UI Symbol', sans-serif;
+  font-size: 0.9rem;
+  background-color: var(--color-accent);
+  padding: 0.2rem 0.4rem;
+  border-radius: 0.2rem;
+}
