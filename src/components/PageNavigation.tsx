@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'gatsby';
-import * as styles from './PageNavigation.module.scss';
+import * as styles from './PageNavigation.module.css';
 
 interface Props {
   previous: {
