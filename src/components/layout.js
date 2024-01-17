@@ -1,5 +1,5 @@
 import * as React from 'react';
-import Header from './Header';
+import Header from './header';
 import { defineCustomElements as deckDeckGoHighlightElement } from '@deckdeckgo/highlight-code/dist/loader';
 import { DarkModeToggler } from './DarkModeToggler';
 deckDeckGoHighlightElement();

@@ -2,7 +2,7 @@ import { Link, graphql } from 'gatsby';
 import * as React from 'react';
 
 import Layout from '../components/layout';
-import { Seo } from '../components/Seo';
+import { Seo } from '../components/seo';
 
 const Posts = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`;

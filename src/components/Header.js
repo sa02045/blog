@@ -1,6 +1,6 @@
 import { Link } from 'gatsby';
 import React from 'react';
-import * as styles from './Header.module.css';
+import * as styles from './header.module.css';
 
 function Header({ location }) {
   const currentPath = location.pathname;
