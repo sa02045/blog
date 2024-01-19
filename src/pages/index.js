@@ -2,8 +2,8 @@ import { graphql } from 'gatsby';
 import * as React from 'react';
 
 import Layout from '../components/layout';
-import { Seo } from '../components/seo';
-import { PostList } from '../components/postList';
+import { Seo } from '../components/Seo';
+import { PostList } from '../components/PostList';
 
 const Home = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`;
