@@ -78,13 +78,14 @@ body {
   font-family: 'Pretendard Variable', Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue',
     'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', 'Apple Color Emoji', 'Segoe UI Emoji',
     'Segoe UI Symbol', sans-serif;
+  color: var(--color-text);
+  background-color: var(--background-color);
 }
 
 body.dark {
   --color-text: #fff;
   --color-heading: #fff;
   --color-accent: #d1dce5;
-
   --background-color: #2e353f;
 }
 
