@@ -2,16 +2,21 @@ import { Link } from 'gatsby';
 import React from 'react';
 import * as styles from './header.module.css';
 import { DarkModeToggler } from './darkModeToggler';
+import classNames from 'classnames';
 
 function Header({ location }) {
   const currentPath = location.pathname;
+
+  const postNavClass = classNames({
+    clicked: currentPath === '/',
+  });
 
   return (
     <header className={styles.header}>
       <nav>
         <ul>
           <Link to="/">
-            <li className={currentPath === '/' ? 'clicked' : ''}>Posts</li>
+            <li className={postNavClass}>Posts</li>
           </Link>
         </ul>
       </nav>
