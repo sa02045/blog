@@ -1,6 +1,7 @@
 import { Link } from 'gatsby';
 import React from 'react';
 import * as styles from './header.module.css';
+import { DarkModeToggler } from './darkModeToggler';
 
 function Header({ location }) {
   const currentPath = location.pathname;
@@ -22,6 +23,13 @@ function Header({ location }) {
             </li>
           </Link>
         </ul> */}
+      </nav>
+      <nav>
+        <ul>
+          <li>
+            <DarkModeToggler />
+          </li>
+        </ul>
       </nav>
     </header>
   );
