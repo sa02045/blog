@@ -217,17 +217,6 @@ a:focus {
   }
 }
 
-@keyframes underline {
-  from {
-    width: 0%;
-    left: 50%;
-  }
-  to {
-    width: 100%;
-    left: 0;
-  }
-}
-
 .home__top-container {
   margin-top: var(--spacing-20);
 }
