@@ -4,7 +4,11 @@ import * as styles from './header.module.css';
 import { DarkModeToggler } from './darkModeToggler';
 import classNames from 'classnames';
 
-function Header({ location }) {
+interface Props {
+  location: Location;
+}
+
+function Header({ location }: Props) {
   const currentPath = location.pathname;
 
   const postNavClass = classNames({
