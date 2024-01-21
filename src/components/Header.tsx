@@ -17,7 +17,7 @@ function Header({ location }: Props) {
 
   return (
     <header className={styles.header}>
-      <nav>
+      <nav className={styles.menu}>
         <ul>
           <Link to="/">
             <li className={postNavClass}>Posts</li>
