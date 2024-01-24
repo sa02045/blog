@@ -1,4 +1,4 @@
-.Navigation ul {
+.navigation ul {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -6,6 +6,6 @@
   padding: 0;
 }
 
-.Navigation a {
+.navigation a {
   color: var(--color-text-light);
 }

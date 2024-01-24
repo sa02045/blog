@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'gatsby';
-import * as styles from './pageNavigation.module.css';
 
 interface Props {
   previous: {
@@ -24,7 +23,7 @@ interface Props {
 
 const PageNavigation = ({ previous, next }: Props) => {
   return (
-    <nav className={styles.Navigation}>
+    <nav className="navigation">
       <ul>
         <li>
           {previous && (

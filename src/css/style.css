@@ -256,3 +256,69 @@ code {
   padding: 0.2rem 0.4rem;
   border-radius: 0.2rem;
 }
+
+.header {
+  display: flex;
+  align-items: center;
+  height: 48px;
+}
+
+.header ul {
+  padding-left: 0;
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+
+.header li {
+  list-style: none;
+}
+
+.header nav {
+  flex: 1;
+}
+
+.menu li {
+  position: relative;
+  list-style: none;
+  cursor: pointer;
+  height: 10px;
+  font-weight: 700;
+  font-size: 24px;
+  color: var(--color-text);
+}
+
+.menu li:hover::after {
+  content: '';
+  display: block;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 100%;
+  background-color: var(--color-text);
+  animation: underline 0.3s ease-in-out forwards;
+  -webkit-animation: underline 0.3s ease-in-out forwards;
+}
+
+@keyframes underline {
+  from {
+    width: 0%;
+    left: 50%;
+  }
+  to {
+    width: 100%;
+    left: 0;
+  }
+}
+
+.navigation ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  list-style: none;
+  padding: 0;
+}
+
+.navigation a {
+  color: var(--color-text-light);
+}

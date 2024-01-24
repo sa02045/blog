@@ -1,6 +1,5 @@
 import { Link } from 'gatsby';
 import React from 'react';
-import * as styles from './header.module.css';
 import { DarkModeToggler } from './darkModeToggler';
 import classNames from 'classnames';
 
@@ -16,8 +15,8 @@ function Header({ location }: Props) {
   });
 
   return (
-    <header className={styles.header}>
-      <nav className={styles.menu}>
+    <header className="header">
+      <nav className="menu">
         <ul>
           <Link to="/">
             <li className={postNavClass}>Posts</li>
