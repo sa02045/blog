@@ -1,6 +1,12 @@
 import React from 'react';
-const About = () => {
-  return <div>coming soon...</div>;
+import Layout from '../components/layout';
+
+interface Props {
+  location: any;
+}
+
+const About = ({ location }: Props) => {
+  return <Layout location={location}>coming soon...</Layout>;
 };
 
 export default About;
