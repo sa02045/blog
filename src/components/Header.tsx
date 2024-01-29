@@ -32,7 +32,7 @@ function Header({ location }: Props) {
           </Link>
         </ul> */}
       </nav>
-      <nav>
+      <nav className="header__dark-toggle">
         <ul>
           <li>
             <DarkModeToggler />

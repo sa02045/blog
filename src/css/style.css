@@ -322,3 +322,12 @@ code {
 .navigation a {
   color: var(--color-text-light);
 }
+
+.header__dark-toggle{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  cursor: pointer;
+}
