@@ -5,11 +5,17 @@ import Layout from '../components/layout';
 import { Seo } from '../components/Seo';
 import { getImage } from 'gatsby-plugin-image';
 import PageNavigation from '../components/PageNavigation';
-const BlogPostTemplate = ({ data: { previous, next, site, markdownRemark: post }, location }) => {
+const BlogPostTemplate = ({
+  data: { previous, next, site, markdownRemark: post },
+  location,
+}: {
+  data: any;
+  location: any;
+}) => {
   const siteTitle = site.siteMetadata?.title || `Title`;
 
   return (
-    <Layout location={location} title={siteTitle}>
+    <Layout location={location}>
       <div
         style={{
           display: 'flex',
@@ -43,7 +49,7 @@ const BlogPostTemplate = ({ data: { previous, next, site, markdownRemark: post }
   );
 };
 
-export const Head = ({ data: { markdownRemark: post } }) => {
+export const Head = ({ data: { markdownRemark: post } }: { data: any }) => {
   const thumbnailURL = getImage(post.frontmatter.image)?.images?.fallback?.src || '';
   return (
     <Seo

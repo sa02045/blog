@@ -4,8 +4,8 @@ import { Footer } from './Footer';
 import { defineCustomElements as deckDeckGoHighlightElement } from '@deckdeckgo/highlight-code/dist/loader';
 deckDeckGoHighlightElement();
 
-const Layout = ({ location, children }) => {
-  const rootPath = `${__PATH_PREFIX__}/`;
+const Layout = ({ location, children }: { location: Location; children: any }) => {
+  const rootPath = '/';
   const isRootPath = location.pathname === rootPath;
 
   return (

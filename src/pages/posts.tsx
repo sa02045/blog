@@ -4,11 +4,9 @@ import * as React from 'react';
 import Layout from '../components/layout';
 import { Seo } from '../components/Seo';
 
-const Posts = ({ data, location }) => {
-  const siteTitle = data.site.siteMetadata?.title || `Title`;
-
+const Posts = ({ data, location }: { data: any; location: any }) => {
   return (
-    <Layout location={location} title={siteTitle}>
+    <Layout location={location}>
       <div className="post-list-wrapper"></div>
     </Layout>
   );

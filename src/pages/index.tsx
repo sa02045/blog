@@ -5,12 +5,11 @@ import Layout from '../components/layout';
 import { Seo } from '../components/Seo';
 import { PostList } from '../components/PostList';
 
-const Home = ({ data, location }) => {
-  const siteTitle = data.site.siteMetadata?.title || `Title`;
+const Home = ({ data, location }: { data: any; location: any }) => {
   const posts = data.allMarkdownRemark.nodes;
 
   return (
-    <Layout location={location} title={siteTitle}>
+    <Layout location={location}>
       <section className="post-list-wrapper">
         <PostList posts={posts} />
       </section>
