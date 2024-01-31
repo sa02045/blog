@@ -5,13 +5,7 @@ import Layout from '../components/layout';
 import { Seo } from '../components/Seo';
 import { getImage } from 'gatsby-plugin-image';
 import PageNavigation from '../components/PageNavigation';
-const BlogPostTemplate = ({
-  data: { previous, next, site, markdownRemark: post },
-  location,
-}: {
-  data: any;
-  location: any;
-}) => {
+const BlogPostTemplate = ({ data: { previous, next, site, markdownRemark: post }, location }) => {
   const siteTitle = site.siteMetadata?.title || `Title`;
 
   return (
@@ -49,7 +43,7 @@ const BlogPostTemplate = ({
   );
 };
 
-export const Head = ({ data: { markdownRemark: post } }: { data: any }) => {
+export const Head = ({ data: { markdownRemark: post } }) => {
   const thumbnailURL = getImage(post.frontmatter.image)?.images?.fallback?.src || '';
   return (
     <Seo
