@@ -44,7 +44,7 @@
   --font-size--1: 0.75rem;
   --fontSize-0: 0.833rem;
   --fontSize-1: 1rem;
-  --fontSize-2: 1.2rem;
+  --fontSize-2: 1.15rem;
   --fontSize-3: 1.44rem;
   --fontSize-4: 1.728rem;
   --fontSize-5: 2.074rem;
@@ -330,4 +330,11 @@ code {
   width: 48px;
   height: 48px;
   cursor: pointer;
+}
+
+.article {
+  font-size: var(--fontSize-2);
+  color: var(--color-text);
+  font-weight: var(--fontWeight-normal);
+  line-height: var(--lineHeight-relaxed);
 }
