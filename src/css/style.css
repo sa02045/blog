@@ -82,12 +82,12 @@ body {
   background-color: var(--background-color);
 }
 
-body.dark {
+/* body.dark {
   --color-text: #fff;
   --color-heading: #fff;
   --color-accent: #d1dce5;
   --background-color: #2e353f;
-}
+} */
 
 footer {
   padding: var(--spacing-6) var(--spacing-0);
@@ -323,7 +323,7 @@ code {
   color: var(--color-text-light);
 }
 
-.header__dark-toggle{
+.header__dark-toggle {
   display: flex;
   align-items: center;
   justify-content: center;

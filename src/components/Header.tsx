@@ -2,7 +2,6 @@ import { Link } from 'gatsby';
 import React from 'react';
 import { DarkModeToggler } from './darkModeToggler';
 import classNames from 'classnames';
-
 interface Props {
   location: Location;
 }
@@ -35,13 +34,13 @@ function Header({ location }: Props) {
           </Link>
         </ul> */}
       </nav>
-      <nav className="header__dark-toggle">
+      {/* <nav className="header__dark-toggle">
         <ul>
           <li>
             <DarkModeToggler />
           </li>
         </ul>
-      </nav>
+      </nav> */}
     </header>
   );
 }
