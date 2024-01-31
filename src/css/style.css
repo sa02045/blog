@@ -339,3 +339,7 @@ code {
 .article strong {
   font-weight: var(--fontWeight-black);
 }
+
+.article h2 {
+  padding: var(--spacing-8) var(--spacing-0) var(--spacing-4) var(--spacing-0);
+}
