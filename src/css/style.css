@@ -343,3 +343,7 @@ code {
 .article h2 {
   padding: var(--spacing-8) var(--spacing-0) var(--spacing-4) var(--spacing-0);
 }
+
+.article h3 {
+  padding: var(--spacing-6) var(--spacing-0) var(--spacing-2) var(--spacing-0);
+}
