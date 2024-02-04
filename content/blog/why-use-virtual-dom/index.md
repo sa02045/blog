@@ -75,7 +75,7 @@ function Bar() {
 }
 ```
 
-'react'가 제공하는 로직은 모든 환경에서 동일하게 사용할 수 있습니다.
+react를 이루는 아래 로직은 모든 환경에서 동일하게 사용할 수 있습니다.
 
 - useState, useEffect, ...hooks
 - props, state
@@ -111,10 +111,13 @@ import ReactPDF from '@react-pdf/renderer';
 ReactPDF.render(<MyDocument />, `${__dirname}/example.pdf`);
 ```
 
+렌더러의 내부를 들여다보면 host 환경에 맞추어 가상 UI를 렌더링하는 방법이 담겨있습니다.
+
 이외에도 정말 다양한 렌더러가 있습니다.
 
-- figma 컴포넌트로 렌더링하는 렌더러 (react-figma)
-- command-line interface로 렌더링하는 렌더러 (ink)
+- figma 컴포넌트로 렌더링하는 렌더러 ([react-figma](https://github.com/react-figma/react-figma))
+- command-line interface로 렌더링하는 렌더러 ([ink](https://github.com/vadimdemedes/ink/blob/168244470cd3e4b85e19b968a55938d013232761/src/reconciler.ts#L4))
+- Slack 메시즈로 렌더링하는 렌더러 ([react-slack-render](https://github.com/andreyvital/react-slack-renderer))
 - 등등...
 
 React가 제공하는 API를 사용하면 자신만의 커스텀 렌더러를 만들 수 있습니다.
@@ -136,3 +139,5 @@ const RendererPublicAPI = {
 - 가상 UI는 실제 host 환경과 렌더링 방식에 대한 관심사를 분리합니다.
 - 가상 UI는 동일한 프로그래밍 방식으로 다양한 환경에서 UI를 만들 수 있게 해줍니다.
 - 렌더러는 가상 UI를 실제 host 환경에 맞추어 렌더링해줍니다.
+
+가상 UI가 단순히 브라우저와 DOM에 종속적인 개념이 아니라 그 이상의 강력한 도구이자 수단임을 알게되었습니다. 이제 가상 UI에 대한 오해를 해소하고 가상 UI를 사용하는 이유에 대해 다시 생각해 볼 차례입니다.
