@@ -17,7 +17,7 @@ React로부터 유명해진 가상 DOM은 이제 막 프론트엔드 개발을 �
 - **결론1: 가상 DOM은 브라우저의 reflow, repaint 비용을 줄여주기 위해 등장한 기술이다.**
 - **결론2: 가상 DOM을 사용하는 이유는 성능 개선을 위해서다.**
 
-하지만 이런 가상 DOM 개념에 대한 접근방법은 핵심을 놓치게 만듭니다. 우리는 가상 DOM에 대한 오해를 해소하고 가상 DOM을 사용하는 이유에 대해 다시 생각해보아야 합니다.
+틀린 말은 아닌 것 같습니다. 하지만 이런 가상 DOM 개념에 대한 접근방법은 핵심을 놓치게 만듭니다. 우리는 가상 DOM에 대한 오해를 해소하고 가상 DOM을 사용하는 이유에 대해 다시 생각해보아야 합니다.
 
 ## DOM은 잊어버려
 
@@ -36,6 +36,10 @@ React로부터 유명해진 가상 DOM은 이제 막 프론트엔드 개발을 �
 DOM에서 한 걸음 물러서 두 개념울 전혀 다른 존재로 바라볼 수록 가상 DOM에 대한 이해가 더욱 쉬워집니다. 우선 단어부터 바꿔서 부르는 것부터 시작해봅시다. 이제부터는 가상 DOM이라는 단어 대신 `가상 UI`라는 단어를 사용하겠습니다.
 
 ## 가상 UI - 렌더링 관심사 분리의 수단
+
+> **사용자 인터페이스를 만들기 위한 JavaScript 라이브러리.**
+
+브라우저든 모바일이든 UI(유저 인터페이스)는 비슷한 구조를 가지고 있습니다. 상태를 가지며 이벤트에 반응하고, 상태에 따라 화면을 업데이트합니다. 우리는 이러한 UI를 만들기 위해 React를 사용합니다.
 
 우리는 다양한 환경의 UI를 하나의 코드로 작성하고 싶습니다. 브라우저, 모바일, 데스크탑, PDF, Canvas, WebGL 등 어떤 환경에서든 동작하는 UI를 만들고 싶습니다. 그리고 우리는 같은 프로그래밍 방식을 사용하면서도 다양한 환경에서 구동되는 UI를 만들고 싶습니다.
 
@@ -82,12 +86,20 @@ DOM에서 한 걸음 물러서 두 개념울 전혀 다른 존재로 바라볼 �
 가상 UI를 브라우저를 위한 DOM으로 렌더링하고 싶나요? react-dom을 사용하면 됩니다. PDF로 렌더링하고 싶나요? react-pdf를 사용하면 됩니다. Native Mobile 환경에서 렌더링하고 싶나요? react-native를 사용하면 됩니다. 만약 우리가 만든 가상 UI를 위한 렌더러가 없다면 직접 만들 수도 있습니다.
 
 ```jsx
-import createReconciler from 'react-reconciler';
+const Reconciler = require('react-reconciler');
 
-const MyRenderer = createReconciler({
-  // ...
-});
+const HostConfig = {};
+
+const MyRenderer = Reconciler(HostConfig);
+
+const RendererPublicAPI = {
+  render(element, container, callback) {},
+};
+
+module.exports = RendererPublicAPI;
 ```
+
+좀 더 자세히 알아보기 위해서는 [React Reconciler](https://github.com/facebook/react/blob/main/packages/react-reconciler/README.md)를 참조해주세요.
 
 ## 정리
 
