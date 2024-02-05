@@ -14,10 +14,10 @@ React로부터 유명해진 가상 DOM은 이제 막 프론트엔드 개발을 �
 
 이러한 정보들을 바탕으로 다음 결론을 내리곤 합니다.
 
-- **결론 1: 가상 DOM은 브라우저의 reflow, repaint 비용을 줄여주기 위해 등장한 기술이다.**
-- **결론 2: 가상 DOM을 사용하는 이유는 성능 개선을 위해서다.**
+- **오해 1: 가상 DOM은 브라우저의 reflow, repaint 비용을 줄여주기 위해 등장한 기술이다.**
+- **오 2: 가상 DOM을 사용하는 이유는 성능 개선을 위해서다.**
 
-완전히 틀린 말은 아닌 것으로 보입니다만 이런 가상 DOM 개념에 대한 접근방법은 핵심을 놓칩니다. 우리는 가상 DOM에 대한 오해를 해소하고 가상 DOM을 사용하는 이유에 대해 다시 생각해 봐야 합니다.
+완전히 틀린 말은 아닌 것으로 보입니다만 이런 가상 DOM 개념에 대한 접근방법은 핵심을 놓칩니다. 우리는 오해를 해소하고 가상 DOM을 사용하는 이유에 대해 다시 생각해 봐야 합니다.
 
 \* 가상 DOM이 React만을 위한 기술은 아니지만 이 글에서는 React를 예시로 들어 설명합니다.
 
@@ -62,7 +62,13 @@ import { useState } from 'react';
 function Foo() {
   const [count, setCount] = useState(0);
 
-  return <button></button>;
+  return (
+    <button
+      onClick={() => {
+        setCount(count + 1);
+      }}
+    ></button>
+  );
 }
 
 // Native Mobile 환경
@@ -71,11 +77,17 @@ import { Button } from 'react-native';
 
 function Bar() {
   const [count, setCount] = useState(0);
-  return <Button></Button>;
+  return (
+    <Button
+      onPress={() => {
+        setCount(count + 1);
+      }}
+    ></Button>
+  );
 }
 ```
 
-react를 이루는 아래 로직은 모든 환경에서 동일하게 사용할 수 있습니다.
+react를 이루는 아래 로직은 대부분 환경에서 동일하게 사용할 수 있습니다.
 
 - useState, useEffect, ...hooks
 - props, state
