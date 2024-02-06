@@ -10,8 +10,12 @@ interface Props {
 const About = ({ location }: Props) => {
   return (
     <Layout location={location}>
-      <section>
-        <h2>Contact</h2>
+      <section
+        style={{
+          marginTop: '60px',
+        }}
+      >
+        <h2>Github</h2>
         <Link to="https://github.com/sa02045">
           <img src={GithubLogo} width={50} height={50} alt="github logo" />
         </Link>
