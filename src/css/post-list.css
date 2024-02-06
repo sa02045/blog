@@ -36,19 +36,14 @@
 }
 
 .post-list-item-description {
-  color: var(--color-text);
-  margin-bottom: var(--spacing-3);
-}
-
-body.dark .post-title {
+  padding: 0px;
+  margin-top: 0px;
+  margin-bottom: 16px;
   color: var(--color-text);
 }
 
 /* mobile */
 @media (max-width: 768px) {
-  .post-list .post-title {
-  }
-
   .post-list-item-description {
     margin-bottom: var(--spacing-1);
   }

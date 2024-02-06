@@ -16,9 +16,7 @@ export const Post = ({ date, title, description, to }: Props) => {
             <header>
               <h2 className="post-title">{title}</h2>
             </header>
-            <section>
-              <p className="post-list-item-description">{description}</p>
-            </section>
+            <p className="post-list-item-description">{description}</p>
             <span className="post-list-item-date">{date}</span>
           </div>
         </article>
