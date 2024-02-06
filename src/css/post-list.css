@@ -47,11 +47,9 @@ body.dark .post-title {
 /* mobile */
 @media (max-width: 768px) {
   .post-list .post-title {
-    font-size: var(--fontSize-2);
   }
 
   .post-list-item-description {
-    font-size: var(--fontSize-0);
     margin-bottom: var(--spacing-1);
   }
 
@@ -62,7 +60,6 @@ body.dark .post-title {
 }
 
 .post-title {
-  font-size: var(--fontSize-4);
   margin-bottom: var(--spacing-2);
   margin-top: var(--spacing-0);
   position: relative;

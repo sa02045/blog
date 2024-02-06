@@ -78,7 +78,7 @@ body {
     'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', 'Apple Color Emoji', 'Segoe UI Emoji',
     'Segoe UI Symbol', sans-serif;
   color: var(--color-text);
-  font-size: var(--fontSize-2);
+  font-size: 17px;
 }
 
 /* body.dark {
@@ -93,7 +93,7 @@ footer {
 }
 
 h1 {
-  font-size: 48px;
+  font-size: 40px;
   color: var(--color-heading);
 }
 
@@ -107,7 +107,7 @@ h6 {
 }
 
 h2 {
-  font-size: 36px;
+  font-size: 28px;
 }
 
 h3 {
@@ -141,11 +141,6 @@ h6 > a {
 }
 
 p {
-  line-height: var(--lineHeight-relaxed);
-  --baseline-multiplier: 0.179;
-  --x-height-multiplier: 0.35;
-  margin: var(--spacing-0) var(--spacing-0) var(--spacing-8) var(--spacing-0);
-  padding: var(--spacing-0);
 }
 
 ul,
@@ -187,7 +182,6 @@ a:focus {
 }
 
 .main-heading {
-  font-size: var(--fontSize-7);
   margin: 0;
 }
 
@@ -201,18 +195,6 @@ a:focus {
   ul,
   ol {
     list-style-position: inside;
-  }
-  h1 {
-    font-size: var(--fontSize-5);
-  }
-  h2 {
-    font-size: var(--fontSize-4);
-  }
-  h3 {
-    font-size: var(--fontSize-3);
-  }
-  h4 {
-    font-size: var(--fontSize-2);
   }
 }
 
@@ -251,7 +233,6 @@ code {
     'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', 'Apple Color Emoji', 'Segoe UI Emoji',
     'Segoe UI Symbol', sans-serif;
   background-color: var(--color-accent);
-  padding: 0.2rem 0.4rem;
   border-radius: 0.2rem;
 }
 
@@ -331,7 +312,6 @@ code {
 }
 
 .article {
-  font-size: var(--fontSize-2);
   color: var(--color-text);
   line-height: var(--lineHeight-relaxed);
 }
