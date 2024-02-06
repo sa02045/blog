@@ -19,15 +19,15 @@ export const Seo = ({ description, title, children, thumbnailURL }: any) => {
     `
   );
 
+  const defaultTitle = site.siteMetadata?.title;
   const metaDescription = description || site.siteMetadata.description;
-  const defaultTitle = site.siteMetadata?.title || title;
   const siteUrl = site.siteMetadata?.siteUrl || 'https://deluxe-centaur-4a55b0.netlify.app/';
   const defaultThumbnailURL = thumbnailURL || '/images/og-image.png';
 
   return (
     <>
       <html lang="ko" />
-      <title>{defaultTitle}</title>
+      <title>{title || defaultTitle}</title>
       <meta name="description" content={metaDescription} />
       <meta property="og:type" content="website" />
       <meta property="og:title" content={title} />

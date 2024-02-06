@@ -6,8 +6,6 @@ import { Seo } from '../components/Seo';
 import { getImage } from 'gatsby-plugin-image';
 import PageNavigation from '../components/PageNavigation';
 const BlogPostTemplate = ({ data: { previous, next, site, markdownRemark: post }, location }) => {
-  const siteTitle = site.siteMetadata?.title || `Title`;
-
   return (
     <Layout location={location}>
       <div
