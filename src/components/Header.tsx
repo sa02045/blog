@@ -20,9 +20,9 @@ function Header({ location }: Props) {
           <Link to="/">
             <li className={postNavClass}>Posts</li>
           </Link>
-          <Link to="/about">
+          {/* <Link to="/about">
             <li className={postNavClass}>about</li>
-          </Link>
+          </Link> */}
         </ul>
       </nav>
       <nav className="header__social">
