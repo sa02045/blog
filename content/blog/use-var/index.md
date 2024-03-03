@@ -49,7 +49,9 @@ description: 'var, let, const의 성능차이'
 
 ### let, const
 
-let, const 키워드는 `TDZ`(Temporal Dead Zone)이라는 개념을 도입하여 호이스팅 문제를 해결한다. TDZ는 이름 그대로 `임시적인 사각지대`를 의미하는데 변수가 선언되기 전까지 변수를 사용할 수 없는 영역을 말한다.
+var이 가진 문제를 해결하기 위해 ES6부터 등장한 let, const 키워드는 `TDZ`(Temporal Dead Zone)이라는 개념을 도입하여 호이스팅 문제를 해결한다.
+
+TDZ는 이름 그대로 `임시적인 사각지대`를 의미하는데 변수가 선언되기 전까지 변수를 사용할 수 없는 영역을 말한다.
 
 ```js
 {
