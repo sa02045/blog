@@ -9,7 +9,6 @@ const About = ({ data, location }) => {
 
   return (
     <Layout location={location} title={siteTitle}>
-      About
     </Layout>
   );
 };
