@@ -42,8 +42,6 @@ value is object
 
 ```ts
 function foo(bar: number | string) {
-  bar; // 여기서 number | string 타입
-
   if (typeof bar === 'number') {
     return bar.toFixed(2); // bar의 타입이 number로 좁혀졌으므로 toFixed 메서드를 사용할 수 있음
   } else {
