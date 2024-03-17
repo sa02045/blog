@@ -43,9 +43,9 @@ value is object
 ```ts
 function foo(bar: number | string) {
   if (typeof bar === 'number') {
-    return bar.toFixed(2); // bar의 타입이 number로 좁혀졌으므로 toFixed 메서드를 사용할 수 있음
+    return bar.toFixed(2); // bar의 타입이 number로 좁혀짐
   } else {
-    return bar.toUpperCase(); // bar의 타입이 string으로 좁혀졌으므로 toUpperCase 메서드를 사용할 수 있음
+    return bar.toUpperCase(); // bar의 타입이 string으로 좁혀짐
   }
 }
 ```
@@ -106,9 +106,9 @@ function isNumber(bar: number | string): bar is number {
 ```ts
 function foo(bar: number | string) {
   if (isNumber(bar)) {
-    return bar.toFixed(2); // bar의 타입이 number로 좁혀졌으므로 toFixed 메서드를 사용할 수 있음
+    return bar.toFixed(2); // bar의 타입이 number로 좁혀짐
   } else {
-    return bar.toUpperCase(); // bar의 타입이 string으로 좁혀졌으므로 toUpperCase 메서드를 사용할 수 있음
+    return bar.toUpperCase(); // bar의 타입이 string으로 좁혀짐
   }
 }
 ```
@@ -135,7 +135,7 @@ function isNumber(bar: number | string): bar is string {
 ```ts
 function foo(bar: number | string) {
   if (isNumber(bar)) {
-    // bar의 타입은 타입 서술어가 서술한 타입 string으로 좁혀진다.
+    // bar의 타입은 타입 서술어가 서술한 타입 `string`으로 좁혀진다.
   } else {
   }
 }
