@@ -66,7 +66,7 @@ if (typeof bar === 'number')
 그래서 반복을 피하기 위해 타입 좁히기를 다음과 같이 함수로 작성할 수 있습니다.
 
 ```ts
-function isNumber(bar: unknown) {
+function isNumber(bar: number | string) {
   return typeof bar === 'number';
 }
 ```
@@ -96,7 +96,7 @@ isNumber()로 검사를 이미 했음에도 bar의 타입을 `string | number`�
 위에서 정의한 isNumber 함수를 타입 서술어를 추가하여 다시 작성하면 다음과 같습니다
 
 ```ts
-function isNumber(bar: unknown): bar is number {
+function isNumber(bar: number | string): bar is number {
   return typeof bar === 'number';
 }
 ```
@@ -125,7 +125,7 @@ function foo(bar: number | string) {
 
 ```ts
 // `bar is string`으로 잘못 작성했을 경우
-function isNumber(bar: unknown): bar is string {
+function isNumber(bar: number | string): bar is string {
   return typeof bar === 'number';
 }
 ```
@@ -177,7 +177,7 @@ function someAction(point: Point2D | Point3D) {
 
 ```ts
 // bar is number라는 타입 서술어가 없어도 동작
-function isNumber(bar: unknown) {
+function isNumber(bar: number | string) {
   return typeof bar === 'number';
 }
 
