@@ -4,7 +4,7 @@ date: '2024-03-17'
 description: '이제 Type Predicates가 필요없을 수도'
 ---
 
-타입스크립트로 작성된 오픈소스 코드를 보다보면 다음과 같은 코드를 종종 볼 수 있습니다.
+타입스크립트로 작성된 오픈소스 코드를 보다보면 다음과 같은 코드를 볼 수 있습니다.
 
 다음은 [react-hook-form](https://github.com/react-hook-form/react-hook-form/blob/00ce24a0a3fc25c98606f673d79ae90c6d3de81a/src/utils/isObject.ts#L4) 프로젝트 코드 중 일부입니다.
 
