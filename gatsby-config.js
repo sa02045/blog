@@ -18,6 +18,7 @@ module.exports = {
     description: `devjojo's blog`,
   },
   plugins: [
+    'gatsby-plugin-postcss',
     `gatsby-plugin-sass`,
     `gatsby-plugin-image`,
     'gatsby-plugin-dark-mode',

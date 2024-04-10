@@ -7,7 +7,6 @@ import { PostList } from '../components/PostList';
 
 const Home = ({ data, location }: { data: any; location: any }) => {
   const posts = data.allMarkdownRemark.nodes;
-  // test
   return (
     <Layout location={location}>
       <section className="post-list-wrapper">
