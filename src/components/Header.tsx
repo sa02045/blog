@@ -1,46 +1,23 @@
 import { Link } from 'gatsby';
 import React from 'react';
-import { DarkModeToggler } from './darkModeToggler';
-import classNames from 'classnames';
-interface Props {
-  location: Location;
-}
 
-function Header({ location }: Props) {
-  const currentPath = location.pathname;
-
-  const postNavClass = classNames({
-    clicked: currentPath === '/',
-  });
-
+function Header() {
   return (
-    <header className="header">
-      <nav className="menu">
-        <ul>
-          <Link to="/">
-            <li className={postNavClass}>Posts</li>
-          </Link>
-          <Link to="/about">
-            <li className={postNavClass}>About</li>
-          </Link>
-        </ul>
-      </nav>
-      <nav className="header__social">
-        {/* <ul>
-          <Link to="https://github.com/sa02045">
-            <li>
-              <img src={Github} width={30} />
-            </li>
-          </Link>
-        </ul> */}
-      </nav>
-      {/* <nav className="header__dark-toggle">
-        <ul>
-          <li>
-            <DarkModeToggler />
-          </li>
-        </ul>
-      </nav> */}
+    <header className="w-full flex justify-between">
+      <ul className="flex pt-5 pb-5">
+        <Link to="/">
+          <li className="text-2xl text-violet-500">devjojo</li>
+        </Link>
+      </ul>
+
+      <ul className="flex pt-5 pb-5">
+        <Link to="/">
+          <li className="text-stone-950 text-2xl ">POST</li>
+        </Link>
+        {/* <Link to="/about">
+          <li className="text-stone-950 text-2xl">About</li>
+        </Link> */}
+      </ul>
     </header>
   );
 }
