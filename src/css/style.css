@@ -239,27 +239,6 @@ code {
   -o-border-radius: 8px;
 }
 
-.header {
-  display: flex;
-  align-items: center;
-  height: 48px;
-}
-
-.header ul {
-  padding-left: 0;
-  display: flex;
-  align-items: center;
-  list-style: none;
-}
-
-.header li {
-  list-style: none;
-}
-
-.header nav {
-  flex: 1;
-}
-
 .menu li {
   position: relative;
   list-style: none;
