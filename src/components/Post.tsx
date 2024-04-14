@@ -6,19 +6,34 @@ interface Props {
   date: string;
   title: string;
   to: string;
+  thumbnail?: string;
 }
 
-export const Post = ({ date, title, description, to }: Props) => {
+export const Post = ({ date, title, description, to, thumbnail }: Props) => {
   return (
     <Link to={to} itemProp="url">
       <article
-        className="pb-10 flex hover:translate-y-3 transition flex-col"
+        className="group pb-10 flex hover:translate-y-3 transition mb-10"
         itemScope
         itemType="http://schema.org/Article"
       >
-        <h3 className="post-title hover:text-cyan-700">{title}</h3>
-        <p className="mt-4 mb-3 text-gray-700">{description}</p>
-        <span className="text-gray-500">{date}</span>
+        {thumbnail && (
+          <div>
+            <img
+              width={100}
+              height={100}
+              className="object-cover object-center mr-10"
+              src={thumbnail}
+              alt="thumbnail"
+            />
+          </div>
+        )}
+
+        <div className="flex-col">
+          <h3 className="text-3xl group-hover:text-violet-500">{title}</h3>
+          <p className="mt-4 mb-3 text-gray-700">{description}</p>
+          <span className="text-gray-500">{date}</span>
+        </div>
       </article>
     </Link>
   );
