@@ -17,12 +17,20 @@
 .article-section p {
   padding-bottom: 32px;
 }
+.article-section ol {
+  padding-bottom: 32px;
+}
 
 .article-section ul {
   list-style: disc;
   margin-bottom: 16px;
   line-height: 1.8;
   list-style-position: inside;
+}
+
+.article-section img {
+  margin-bottom: 30px;
+  margin-top: 30px;
 }
 
 .article-section ol {
