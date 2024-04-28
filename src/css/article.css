@@ -21,4 +21,22 @@
 .article-section ul {
   list-style: disc;
   margin-bottom: 16px;
+  line-height: 1.8;
+  list-style-position: inside;
+}
+
+.article-section ol {
+  list-style: decimal;
+  line-height: 1.8;
+  list-style-position: inside;
+}
+
+.article-section li p {
+  display: inline;
+  padding-bottom: 0;
+}
+
+.article-section img {
+  padding-bottom: 32px;
+  padding-top: 32px;
 }
