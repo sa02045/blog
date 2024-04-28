@@ -4,7 +4,6 @@ import { graphql } from 'gatsby';
 import Layout from '../components/layout';
 import { Seo } from '../components/Seo';
 import { getImage } from 'gatsby-plugin-image';
-import PageNavigation from '../components/PageNavigation';
 const BlogPostTemplate = ({ data: { previous, next, site, markdownRemark: post }, location }) => {
   return (
     <Layout location={location}>
@@ -23,7 +22,6 @@ const BlogPostTemplate = ({ data: { previous, next, site, markdownRemark: post }
           <section dangerouslySetInnerHTML={{ __html: post.html }} itemProp="articleBody"></section>
           <hr />
         </article>
-        <PageNavigation previous={previous} next={next} />
       </div>
     </Layout>
   );
