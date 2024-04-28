@@ -4,7 +4,7 @@ import React from 'react';
 function Header() {
   return (
     <header className="px-6 py-4 border-b">
-      <div className="flex justify-between max-w-screen-lg mx-auto">
+      <div className="flex justify-between max-w-screen-md mx-auto">
         <ul className="flex">
           <Link to="/">
             <li className="text-2xl text-violet-500 font-bold">seunghee 기술블로그</li>
