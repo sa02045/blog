@@ -1,0 +1,20 @@
+.article-section strong {
+  font-weight: var(--fontWeight-black);
+}
+
+.article-section h2 {
+  padding-bottom: 32px;
+}
+
+.article-section h3 {
+  padding-bottom: 32px;
+}
+
+.article-section p {
+  padding-bottom: 32px;
+}
+
+.article-section ul {
+  list-style: disc;
+  margin-bottom: 16px;
+}

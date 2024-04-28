@@ -1,9 +1,0 @@
-.post-list:hover {
-  transform: translateY(-5px);
-  transition: transform 0.2s ease-in-out;
-}
-
-.post-list:hover .post-title {
-  color: var(--color-primary);
-  transition: color 0.2s ease-in-out;
-}

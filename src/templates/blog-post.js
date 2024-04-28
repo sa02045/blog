@@ -5,24 +5,25 @@ import Layout from '../components/layout';
 import { Seo } from '../components/Seo';
 import { getImage } from 'gatsby-plugin-image';
 const BlogPostTemplate = ({ data: { previous, next, site, markdownRemark: post }, location }) => {
+  const dateText = new Date(post.frontmatter.date).toLocaleDateString('ko-KR', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+  });
+
   return (
     <Layout location={location}>
-      <div className="flex flex-col">
-        <article className="article" itemScope itemType="http://schema.org/Article">
-          <header>
-            <h1 itemProp="headline">{post.frontmatter.title}</h1>
-            <p>
-              {new Date(post.frontmatter.date).toLocaleDateString('ko-KR', {
-                year: 'numeric',
-                month: 'long',
-                day: 'numeric',
-              })}
-            </p>
-          </header>
-          <section dangerouslySetInnerHTML={{ __html: post.html }} itemProp="articleBody"></section>
-          <hr />
-        </article>
-      </div>
+      <article className="flex flex-col" itemScope itemType="http://schema.org/Article">
+        <div className="mb-10">
+          <h1 className="text-3xl">{post.frontmatter.title}</h1>
+          <p className="text-sm mt-6">{dateText}</p>
+        </div>
+        <section
+          className="article-section"
+          dangerouslySetInnerHTML={{ __html: post.html }}
+          itemProp="articleBody"
+        ></section>
+      </article>
     </Layout>
   );
 };

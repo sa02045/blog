@@ -1,5 +1,5 @@
 @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard-dynamic-subset.css');
-@import './post-list.css';
+@import './article.css';
 
 @tailwind base;
 @tailwind components;
@@ -249,39 +249,9 @@ code {
   height: 48px;
   cursor: pointer;
 }
-
-.article {
-  color: var(--color-text);
-  line-height: var(--lineHeight-relaxed);
-}
-
-.article strong {
-  font-weight: var(--fontWeight-black);
-}
-
-.article h2 {
-  padding: var(--spacing-8) var(--spacing-0) var(--spacing-4) var(--spacing-0);
-}
-
-.article h3 {
-  padding: var(--spacing-6) var(--spacing-0) var(--spacing-2) var(--spacing-0);
-}
-
 .gatsby-resp-image-wrapper {
   margin-bottom: var(--spacing-12);
   margin-top: var(--spacing-12);
-}
-
-.article ul {
-  padding-left: 34px;
-  margin-top: 34px;
-  margin-bottom: 34px;
-}
-
-.article ol {
-  padding-left: 34px;
-  margin-top: 34px;
-  margin-bottom: 34px;
 }
 
 deckgo-highlight-code {
