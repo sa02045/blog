@@ -255,7 +255,6 @@ code {
 }
 
 deckgo-highlight-code {
-  margin-top: 34px;
-  margin-bottom: 34px;
   font-size: 15px;
+  margin-bottom: 64px;
 }
