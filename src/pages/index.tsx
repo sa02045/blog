@@ -9,7 +9,7 @@ const Home = ({ data, location }: { data: any; location: any }) => {
   const posts = data.allMarkdownRemark.nodes;
   return (
     <Layout location={location}>
-      <section className="post-list-wrapper">
+      <section>
         <PostList posts={posts} />
       </section>
     </Layout>
@@ -37,11 +37,6 @@ export const pageQuery = graphql`
           date(formatString: "YYYY.MM.DD")
           title
           description
-          image {
-            childImageSharp {
-              gatsbyImageData(width: 800, height: 400, placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
-            }
-          }
         }
       }
     }
