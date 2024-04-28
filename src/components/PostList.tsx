@@ -1,19 +1,9 @@
 import { Post } from './Post';
 import React from 'react';
-
-interface Post {
-  frontmatter: {
-    title: string;
-    description: string;
-    date: string;
-  };
-  fields: {
-    slug: string;
-  };
-}
+import type { Post as PostType } from '../schema';
 
 interface Props {
-  posts: Post[];
+  posts: PostType[];
 }
 
 export const PostList = ({ posts }: Props) => {
@@ -24,7 +14,16 @@ export const PostList = ({ posts }: Props) => {
         const description = post.frontmatter.description;
         const date = post.frontmatter.date;
         const to = post.fields.slug;
-        return <Post key={post.fields.slug} title={title} description={description} date={date} to={to} />;
+        return (
+          <Post
+            key={post.fields.slug}
+            title={title}
+            description={description}
+            date={date}
+            to={to}
+            tags={post.frontmatter.tags}
+          />
+        );
       })}
     </>
   );

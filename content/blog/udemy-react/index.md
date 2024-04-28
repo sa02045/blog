@@ -3,6 +3,7 @@ title: 'udemy "React 완벽 가이드 with Redux, Next.js, TypeScript" 수강후
 date: '2024-03-31'
 description: 'udemy "React 완벽 가이드 with Redux, Next.js, TypeScript"을 수강하고'
 image: ../../../src/images/udemy-wrtiting.png
+tags: ['후기']
 ---
 
 | 해당 콘텐츠는 유데미로부터 강의 쿠폰을 제공받아 작성되었습니다

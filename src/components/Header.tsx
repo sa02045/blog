@@ -7,7 +7,7 @@ function Header() {
       <div className="flex justify-between max-w-screen-md mx-auto">
         <ul className="flex">
           <Link to="/">
-            <li className="text-2xl text-violet-500 font-bold">seunghee 기술블로그</li>
+            <li className="text-2xl text-violet-500 font-bold">seunghee 블로그</li>
           </Link>
         </ul>
 
