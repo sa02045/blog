@@ -2,6 +2,10 @@
   font-weight: var(--fontWeight-black);
 }
 
+.article-section p {
+  line-height: 1.8;
+}
+
 .article-section h2 {
   padding-bottom: 32px;
 }
