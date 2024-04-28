@@ -144,19 +144,10 @@ h6 > a {
   color: inherit;
 }
 
-p {
-}
-
 ul,
 ol {
   list-style-position: outside;
   list-style-image: none;
-}
-
-ul li,
-ol li {
-  padding-left: var(--spacing-2);
-  margin-bottom: 8px;
 }
 
 li > p {
@@ -239,28 +230,6 @@ code {
   -o-border-radius: 8px;
 }
 
-.menu li {
-  position: relative;
-  list-style: none;
-  cursor: pointer;
-  height: 10px;
-  font-weight: 700;
-  font-size: 24px;
-  color: var(--color-text);
-}
-
-.menu li:hover::after {
-  content: '';
-  display: block;
-  left: 0;
-  bottom: 0;
-  height: 2px;
-  width: 100%;
-  background-color: var(--color-text);
-  animation: underline 0.3s ease-in-out forwards;
-  -webkit-animation: underline 0.3s ease-in-out forwards;
-}
-
 @keyframes underline {
   from {
     width: 0%;
@@ -270,18 +239,6 @@ code {
     width: 100%;
     left: 0;
   }
-}
-
-.navigation ul {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  list-style: none;
-  padding: 0;
-}
-
-.navigation a {
-  color: var(--color-text-light);
 }
 
 .header__dark-toggle {

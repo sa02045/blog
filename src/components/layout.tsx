@@ -11,13 +11,10 @@ interface Props {
 }
 
 const Layout = ({ location, children }: Props) => {
-  const rootPath = '/';
-  const isRootPath = location.pathname === rootPath;
-
   return (
-    <div className="global-wrapper" data-is-root-path={isRootPath}>
+    <div>
       <Header />
-      <main>{children}</main>
+      <main className="pt-12 pl-6 pr-6 flex overflow-y-scroll max-w-screen-lg mx-auto">{children}</main>
       <Footer />
     </div>
   );

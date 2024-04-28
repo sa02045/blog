@@ -8,34 +8,22 @@ import PageNavigation from '../components/PageNavigation';
 const BlogPostTemplate = ({ data: { previous, next, site, markdownRemark: post }, location }) => {
   return (
     <Layout location={location}>
-      <div
-        style={{
-          display: 'flex',
-        }}
-      >
-        <div
-          style={{
-            display: 'flex',
-            flexDirection: 'column',
-          }}
-        >
-          <article className="article" itemScope itemType="http://schema.org/Article">
-            <header>
-              <h1 itemProp="headline">{post.frontmatter.title}</h1>
-              <p>
-                {new Date(post.frontmatter.date).toLocaleDateString('ko-KR', {
-                  year: 'numeric',
-                  month: 'long',
-                  day: 'numeric',
-                })}
-              </p>
-            </header>
-            <section dangerouslySetInnerHTML={{ __html: post.html }} itemProp="articleBody" />
-            <hr />
-            <footer></footer>
-          </article>
-          <PageNavigation previous={previous} next={next} />
-        </div>
+      <div className="flex flex-col">
+        <article className="article" itemScope itemType="http://schema.org/Article">
+          <header>
+            <h1 itemProp="headline">{post.frontmatter.title}</h1>
+            <p>
+              {new Date(post.frontmatter.date).toLocaleDateString('ko-KR', {
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric',
+              })}
+            </p>
+          </header>
+          <section dangerouslySetInnerHTML={{ __html: post.html }} itemProp="articleBody"></section>
+          <hr />
+        </article>
+        <PageNavigation previous={previous} next={next} />
       </div>
     </Layout>
   );
