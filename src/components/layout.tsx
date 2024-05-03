@@ -6,7 +6,7 @@ import { defineCustomElements as deckDeckGoHighlightElement } from '@deckdeckgo/
 deckDeckGoHighlightElement();
 
 interface Props {
-  location: Location;
+  location?: Location;
   children: React.ReactNode;
 }
 
