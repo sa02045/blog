@@ -13,13 +13,10 @@ function Header() {
 
         <ul className="flex">
           <Link to="/">
-            <li className="text-stone-950 text-xl">기술 글</li>
+            <li className="text-stone-950 text-xl mr-5">기술 글</li>
           </Link>
           {/* <Link to="/essay">
-            <li className="text-stone-950 text-xl ml-3">에세이</li>
-          </Link>
-          <Link to="/about">
-            <li className="text-stone-950 text-xl ml-3">자기소개</li>
+            <li className="text-stone-950 text-xl">짧은 글</li>
           </Link> */}
         </ul>
       </div>
