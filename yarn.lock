@@ -7279,6 +7279,11 @@ gatsby-sharp@^1.6.0:
     "@types/sharp" "^0.31.1"
     sharp "^0.31.3"
 
+gatsby-source-filesystem-markdown-name@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/gatsby-source-filesystem-markdown-name/-/gatsby-source-filesystem-markdown-name-1.0.1.tgz#90fb845755bf492709bacf0eae3933350b86443e"
+  integrity sha512-BbsmU6GqZebq6DOu3F7euN8duhoY/Yc/mPn+UZKUOH7Y5WJeYC4bN+Od+ZCrLqgW3q6WP2ysM02U8ANxSEqFAw==
+
 gatsby-source-filesystem@^5.6.0:
   version "5.6.0"
   resolved "https://registry.yarnpkg.com/gatsby-source-filesystem/-/gatsby-source-filesystem-5.6.0.tgz#cf70b510bf68d02d0197e38e338eaff49846850c"
