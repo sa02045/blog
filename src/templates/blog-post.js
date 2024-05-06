@@ -4,7 +4,7 @@ import { graphql } from 'gatsby';
 import Layout from '../components/layout';
 import { Seo } from '../components/Seo';
 import { getImage } from 'gatsby-plugin-image';
-import Utterances from '../components/Utterances';
+import Giscus from '../components/Giscus';
 
 export const Head = ({ data: { markdownRemark: post } }) => {
   const thumbnailURL = getImage(post.frontmatter.image)?.images?.fallback?.src || '';
@@ -36,7 +36,7 @@ const BlogPostTemplate = ({ data: { site, markdownRemark: post }, location }) =>
           dangerouslySetInnerHTML={{ __html: post.html }}
           itemProp="articleBody"
         ></section>
-        <Utterances />
+        <Giscus />
       </article>
     </Layout>
   );
