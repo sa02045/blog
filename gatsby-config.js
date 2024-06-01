@@ -32,13 +32,6 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/content/essay`,
-        name: `essay`,
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
         name: `images`,
         path: `${__dirname}/src/images`,
       },
@@ -91,13 +84,6 @@ module.exports = {
       options: {
         fonts: [`limelight`, `source sans pro\:300,400,400i,700`],
         display: 'swap',
-      },
-    },
-    {
-      resolve: `gatsby-plugin-gtag`,
-      options: {
-        trackingId: 'G-Z16KCJFFT5',
-        head: true,
       },
     },
   ],
